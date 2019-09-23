@@ -1,4 +1,4 @@
-<div class="flex flex-col">
+<div class="flex flex-col h-full">
         @include('includes/header')
 @php
     $widgetGroup = get_widget_group('sidebar');
@@ -31,7 +31,7 @@
             $settings = $widgetGroupBlock->settings;
         @endphp
 
-        <div class="widget bg-sidebar">
+        <div class="widget bg-sidebar flex-1">
             @if($settings->get('renderTitle'))
                 <div class="widget-header">
                     <{{ get_theme_setting('widgets.titleSize')}} class="widget-title">

@@ -16,22 +16,32 @@
             "Ice peak" is a minimal and clean Laraone blog theme.
         </h6>
         <!-- Social Media icons -->
-        <div class="text-center pb-16 border-b w-8/12 mx-auto w-8/12 border-sidebar-1">
-            <a href="#">
-                <i class="fab fa-facebook-f text-3xl hover:text-gray-400 pr-2 text-white"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-twitter fa-lg pr-2 text-3xl hover:text-gray-400 text-white"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-instagram pr-2 text-3xl hover:text-gray-400 text-white"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-linkedin-in pr-2 text-3xl hover:text-gray-400 text-white"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-google-plus-g fa-lg pr-2 text-3xl hover:text-gray-400 text-white"></i>
-            </a>
+        <div class="text-center flex justify-center pb-16 border-b w-8/12 mx-auto w-8/12 border-sidebar-1">
+            <div class="pr-4">
+                <a href="#">
+                    <i class="fab fa-facebook-f text-3xl hover:text-gray-400 text-white"></i>
+                </a>
+            </div>
+            <div class="pr-4">
+                <a href="#">
+                    <i class="fab fa-twitter fa-lg text-3xl hover:text-gray-400 text-white"></i>
+                </a>
+            </div>
+            <div class="pr-4">
+                <a href="#">
+                    <i class="fab fa-instagram text-3xl hover:text-gray-400 text-white"></i>
+                </a>
+            </div>
+            <div class="pr-4">
+                <a href="#">
+                    <i class="fab fa-linkedin-in text-3xl hover:text-gray-400 text-white"></i>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <i class="fab fa-google-plus-g fa-lg text-3xl hover:text-gray-400 text-white"></i>
+                </a>
+            </div>
         </div>
         <!-- Horizontal border line -->
         <div class="border-t text-center mx-auto w-8/12 border-sidebar-2">

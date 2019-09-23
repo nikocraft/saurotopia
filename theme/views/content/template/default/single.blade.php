@@ -28,6 +28,8 @@
         <img src="{{ $content->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
     @endif
 
+    <div class="content-container">
+
     @include('content/template/default/partials/content')
 
     <div class="post-meta">
@@ -76,9 +78,9 @@
                         };
                         (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
                             var d = document, s = d.createElement('script');
-                            
+
                             s.src = 'https://{{ get_website_setting('comments.disqusChannel') }}.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
-                            
+
                             s.setAttribute('data-timestamp', +new Date());
                             (d.head || d.body).appendChild(s);
                         })();
@@ -91,3 +93,4 @@
             {{-- defaults to no comments! --}}
     @endswitch
 @endif
+</div>
