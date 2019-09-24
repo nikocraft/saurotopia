@@ -9,6 +9,9 @@
     {{-- @include('includes/header') --}}
     @yield('content')
     {{-- @include('includes/footer') --}}
+    <div class="footer-holder-website container container-aurora bg-white">
+            @include('includes/footer')
+    </div>
 </div>
 
 <!-- Scripts -->

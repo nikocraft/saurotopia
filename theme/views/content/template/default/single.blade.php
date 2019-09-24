@@ -11,38 +11,38 @@
 @endphp
 
 <div class="post">
-    @if($showTitle)
-        <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title">{{ $content->title }}</{{ get_theme_setting('content.general.postTitle.size') }}>
-    @endif
-    @if($showMetaData)
-        <div class="post-meta">
-            <div class="post-meta-detail">
-                Posted on {{ $content->created_at->format('Y-m-d') }} by {{ $content->author->username }}
-            </div>
-        </div>
-    @endif
-
-    @if($content->featuredimage && !empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
+        @if($content->featuredimage && !empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
         <div class="post-featured-image" style='background-image: url({{ $content->featuredimage->original }});'></div>
     @elseif($content->featuredimage && empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
         <img src="{{ $content->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
     @endif
+    {{-- <div class="content-container">
+        <div class="post-meta">
+            <div class="post-meta-detail">
+                <div class="uppercase post-taxonomy">
+                    @taxonomy([
+                        'taxonomy' => 'Tags',
+                        'post' => $content,
+                        'commaSeparate' => false
+                    ]) @endtaxonomy
+                </div>
+            </div>
+        </div>
+        @if($showTitle)
+            <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title pt-6">{{ $content->title }}</{{ get_theme_setting('content.general.postTitle.size') }}>
+        @endif
+        @if($showMetaData)
+            <div class="post-meta">
+                <div class="post-meta-detail">
+                    <p class="text-gray-500 text-lg lg:text-2xl">Posted on {{ $content->created_at->format('Y-m-d') }} &nbsp; &bull; &nbsp; by &nbsp; </p><p class="text-green-400 hover:text-green-500 text-lg lg:text-2xl"> {{ $content->author->username }}</p>
+                </div>
+            </div>
+        @endif
+    </div> --}}
 
     <div class="content-container">
 
     @include('content/template/default/partials/content')
-
-    <div class="post-meta">
-        <div class="post-meta-detail">
-            <div class="post-taxonomy">
-                @taxonomy([
-                    'taxonomy' => 'Tags',
-                    'post' => $content,
-                    'commaSeparate' => false
-                ]) @endtaxonomy
-            </div>
-        </div>
-    </div>
 
     @if($showAuthorBio)
         <div class="post-author">
@@ -53,7 +53,7 @@
             </div>
         </div>
     @endif
-</div>
+
 
 
 @if($showComments)
@@ -93,4 +93,5 @@
             {{-- defaults to no comments! --}}
     @endswitch
 @endif
+</div>
 </div>

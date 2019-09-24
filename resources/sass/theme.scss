@@ -46,6 +46,14 @@ footer {
     flex-direction: column;
 }
 
+.footer-holder-sidebar {
+    display: none;
+}
+
+.footer-holder-website {
+    display: block;
+}
+
 .btn:active, .btn.active {
     -webkit-box-shadow: unset;
     box-shadow: inset unset;
@@ -84,6 +92,12 @@ footer {
 @media (min-width: 992px) {
     .container {
         width: 100%;
+    }
+    .footer-holder-sidebar {
+        display: block;
+    }
+    .footer-holder-website {
+        display: none;
     }
 }
 
@@ -125,7 +139,6 @@ footer {
 .sidebar {
     width: 100%;
     height: auto;
-    min-height: 100vh;
     padding: 0px;
 }
 
@@ -152,6 +165,7 @@ footer {
 
     .sidebar {
         width: 30%;
+        min-height: 100vh;
     }
 
     .sidebar-left {
@@ -263,7 +277,7 @@ footer {
 }
 
 .menu {
-    display: none;
+    display: flex;
     flex-direction: column;
     flex: 1;
     justify-content: flex-end;
@@ -329,6 +343,18 @@ footer {
     display: flex;
     flex: 1;
     justify-content: flex-end;
+}
+
+.responsive-wrap-sidebar {
+    display: none;
+}
+
+.responsive-height-sidebar {
+    height: 440px;
+}
+
+.hamburger-hidden {
+    display: flex;
 }
 
 #hamburger {
@@ -412,7 +438,7 @@ footer {
 
 @media (min-width: 768px) {
     .menu {
-        display: none;
+        display: flex;
     }
 
     .responsive-menu {
@@ -426,6 +452,16 @@ footer {
     }
 
     .responsive-menu {
+        display: none;
+    }
+
+    .responsive-wrap-sidebar {
+        display: block;
+    }
+    .responsive-height-sidebar {
+        height: auto;
+    }
+    .hamburger-hidden {
         display: none;
     }
 }
@@ -630,12 +666,19 @@ input[type="checkbox"][disabled] {
 }
 
 .post-taxonomy .post-term {
-    padding: 1px 12px;
-    color: #555;
-    border-radius: 4px;
+    padding: 5px 15px;
+    color: rgb(255, 255, 255);
+    background-color: #f6ad55;
+    // border-radius: 4px;
     margin-right: 5px;
     line-height: 20px;
-    border: 1px solid #c0d3e6;
+    // border: 1px solid #c0d3e6;
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+.post-taxonomy .post-term:hover {
+    background-color: #fbd38d;
 }
 
 .posts .post .post-excerpt {
@@ -669,7 +712,7 @@ input[type="checkbox"][disabled] {
 }
 
 .posts .post div.post-featured-image, .post div.post-featured-image {
-    height: 300px;
+    height: 75vh;
     background-size: cover;
     background-position: center;
 }
@@ -788,4 +831,9 @@ input[type="checkbox"][disabled] {
 
 .content-container {
     padding: 45px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
 }

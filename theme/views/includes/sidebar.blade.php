@@ -31,7 +31,7 @@
             $settings = $widgetGroupBlock->settings;
         @endphp
 
-        <div class="widget bg-sidebar flex-1">
+        <div class="widget bg-sidebar flex-1 responsive-wrap-sidebar">
             @if($settings->get('renderTitle'))
                 <div class="widget-header">
                     <{{ get_theme_setting('widgets.titleSize')}} class="widget-title">
@@ -48,5 +48,13 @@
         </div>
     @endforeach
 @endif
-@include('includes/footer')
+{{-- Hamburger menu sidebar (visible from 992px screen width) --}}
+<div class="justify-center items-center hamburger-hidden">
+    <div class="px-6 pt-6 pb-4 hover:bg-green-400">
+        <i class="fas fa-bars text-white text-5xl"></i>
+    </div>
+</div>
+<div class="footer-holder-sidebar">
+    @include('includes/footer')
+</div>
 </div>

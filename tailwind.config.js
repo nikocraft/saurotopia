@@ -2,6 +2,9 @@ module.exports = {
     theme: {
         extend: {}
     },
+    screens: {
+        'mdxl': '992px',
+    },
     variants: {},
     plugins: [
         function ({ addUtilities }) {
