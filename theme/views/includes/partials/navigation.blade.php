@@ -44,7 +44,7 @@
             </div>
         </div>
         <!-- Responsive wrapper -->
-        <div class="responsive-wrap-sidebar">
+        <div class="hidden" id="responsive-menu">
             <!-- Horizontal border line -->
             <div class="border-t text-center mx-auto w-8/12 border-sidebar-2">
             </div>
@@ -96,3 +96,56 @@
         </div>
         </section>
     </div>
+
+<div class="responsive-menu-sidebar">
+
+    <!-- Horizontal border line -->
+    <div class="border-t text-center mx-auto w-8/12 border-sidebar-2">
+    </div>
+    <!-- Menu -->
+    @php
+            $menu = get_menu('header');
+            @endphp
+        <section class="flex flex-col mx-auto py-20 w-8/12">
+            <div class="menu">
+            @if($menu)
+            @foreach ($menu as $key => $item)
+                <div class="menu-item @if($item->subItems->count()) dropdown @endif @if(!$item->subItems->count()) pb-2 @endif">
+                    @if($item->parent_id == null)
+                        <a class="text-2xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/{{ $item->url }}">{{ $item->title }}</a>
+                    @endif
+
+                    @if($item->subItems->count())
+                        <div class="dropdown-content animated zoomIn faster">
+                        @foreach ($item->subItems as $key => $subItem)
+                            <div class="drop-menu-item pb-2"><a class="text-2xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/{{ $subItem->url }}">{{ $subItem->title }}</a></div>
+                        @endforeach
+                        </div>
+                    @endif
+                </div>
+            @endforeach
+        @else
+
+            <div class="menu-item pb-2">
+                    <a class="text-2xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/">Start</a>
+                </div>
+
+                <div class="menu-item pb-2">
+                    <a class="text-2xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">Blog</a>
+                </div>
+
+                <div class="menu-item dropdown">
+                        <a class="text-2xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">Media</a>
+                    <div class="dropdown-content">
+                        <div class="drop-menu-item"><a class="text-2xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">Videos</a></div>
+                        <div class="drop-menu-item"><a class="text-2xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">Images</a></div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <a class="text-2xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">About</a>
+                </div>
+        @endif
+    </div>
+    </section>
+</div>

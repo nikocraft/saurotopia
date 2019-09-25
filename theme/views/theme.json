@@ -522,8 +522,8 @@
                                     "key": "inAnimation",
                                     "default": "bounceInRight",
                                     "type": "string",
-                                    "meta": { "uiType": "select", "options": [ 
-                                        "bounceInLeft", "bounceInRight", "bounceInUp", "bounceInDown", 
+                                    "meta": { "uiType": "select", "options": [
+                                        "bounceInLeft", "bounceInRight", "bounceInUp", "bounceInDown",
                                         "zoomInLeft", "zoomInRight", "zoomInUp", "zoomInDown",
                                         "slideInLeft", "slideInRight", "slideInUp", "slideInDown"
                                         ] }
@@ -533,7 +533,7 @@
                                     "key": "outAnimation",
                                     "default": "bounceOutUp",
                                     "type": "string",
-                                    "meta": { "uiType": "select", "options": [ 
+                                    "meta": { "uiType": "select", "options": [
                                         "bounceOutLeft", "bounceOutRight", "bounceOutUp", "bounceOutDown",
                                         "zoomOutLeft", "zoomOutRight", "zoomOutUp", "zoomOutDown",
                                         "slideOutLeft", "slideOutRight", "slideOutUp", "slideOutDown"
