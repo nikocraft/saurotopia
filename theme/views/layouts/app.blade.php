@@ -45,13 +45,13 @@
     $hamburger.on("click", function(e) {
         $hamburger.toggleClass("is-active");
         var $sidebarId = $("#sidebar");
-        var $responsiveWidgetId = $("#responsive-widget");
+        var $responsiveWidgetId = $(".responsive-widget");
         var $hamburgerId = $("#hamburger");
         if($hamburger.hasClass('is-active')) {
             $hamburgerId.attr("class", "container container-aurora content-wrap");
             $hamburgerId.addClass("require-visible require-invisible-fullwidth-menu animated {{ get_theme_setting('header.hamburger.general.inAnimation') }} slow");
-            $responsiveWidgetId.removeClass("widget animated {{ get_theme_setting('header.hamburger.general.outAnimation') }}");
-            $responsiveWidgetId.addClass("require-visible mt-10 py-16 animated {{ get_theme_setting('header.hamburger.general.inAnimation') }} slow");
+            $responsiveWidgetId.removeClass("animated {{ get_theme_setting('header.hamburger.general.outAnimation') }}");
+            $responsiveWidgetId.addClass("widget justify-center require-visible animated {{ get_theme_setting('header.hamburger.general.inAnimation') }} slow responsive-first-widget");
             $sidebarId.removeClass("responsive-height-sidebar");
             $responsiveWidgetId.removeClass("responsive-widget-hidden");
         } else {
@@ -61,10 +61,10 @@
             $responsiveWidgetId.addClass("responsive-widget-hidden");
             window.setTimeout(function() {
                 $('#hamburger').addClass("animated {{ get_theme_setting('header.hamburger.general.outAnimation') }}");
-                $('#responsive-widget').addClass("widget animated {{ get_theme_setting('header.hamburger.general.outAnimation') }}");
+                $('.responsive-widget').addClass("animated {{ get_theme_setting('header.hamburger.general.outAnimation') }}");
             }, 200);
             window.setTimeout(function() {
-                $('#responsive-widget').removeClass("require-visible mt-10 py-16 animated {{ get_theme_setting('header.hamburger.general.outAnimation') }}");
+                $('.responsive-widget').removeClass("require-visible responsive-first-widget animated {{ get_theme_setting('header.hamburger.general.outAnimation') }}");
                 $('#hamburger').removeClass("require-visible");
             }, 800);
         }

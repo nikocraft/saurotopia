@@ -1,10 +1,10 @@
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 // Components styles
-@import "hamburgers";
-@import "components";
-@import "output";
+@import "hamburgers.css";
+@import "components.scss";
+@import "tailwind.css";
 
 body {
     overflow-x: hidden;
@@ -332,7 +332,7 @@ footer {
     min-width: 220px;
     height: max-content;
     background-color: #2c2c2c;
-    padding: 0.375rem 0px;
+    padding: 6px 0px;
     z-index: 90000;
   }
 
@@ -353,7 +353,7 @@ footer {
     display: none;
 }
 
-#responsive-widget {
+.responsive-widget {
     display: none;
 }
 
@@ -362,11 +362,19 @@ footer {
 }
 
 .responsive-widget-visible {
-    display: flex;
+    display: block;
 }
 
 .responsive-height-sidebar {
-    height: 440px;
+    height: 500px;
+}
+
+.widget-group > .responsive-first-widget {
+    margin-top: 25px;
+}
+
+.widget-group > .responsive-first-widget ~ .responsive-first-widget {
+    margin-top: -4px;
 }
 
 .hamburger-hidden {
@@ -376,7 +384,7 @@ footer {
 .hamburger-position {
     left: 50%;
     margin-left: -35px;
-    top: 35%;
+    top: 42.5%;
     margin-top: 0px;
 }
 
@@ -460,7 +468,6 @@ footer {
 
 .hamburger {
     outline: none !important;
-    z-index: 20000;
     color: #fff !important;
 }
 
@@ -479,8 +486,8 @@ footer {
         display: flex;
     }
 
-    #responsive-widget {
-        display: flex;
+    .responsive-widget {
+        display: block;
     }
 
     .responsive-menu {
@@ -499,6 +506,7 @@ footer {
     .height-sidebar-full {
         height: 100%;
     }
+
     #hamburger {
         display: none;
     }
@@ -574,6 +582,13 @@ footer {
 .h5, h5 { font-size: 20px; }
 .h6, h6 { font-size: 15px; }
 
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+
 .button-block .h1,
 .button-block .h2,
 .button-block .h3,
@@ -636,7 +651,14 @@ input[type="checkbox"][disabled] {
 
 /** Widget */
 .widget {
-    padding-bottom: 15px;
+    padding: 15px;
+
+}
+
+.widget-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
 }
 
 .widget .widget-header {
@@ -645,6 +667,7 @@ input[type="checkbox"][disabled] {
 
 .widget .widget-body {
     /* padding: 0px 15px; */
+    // padding: 5px;
 }
 
 .widget .widget-title {
@@ -881,3 +904,106 @@ input[type="checkbox"][disabled] {
     display: flex;
     justify-content: center;
 }
+
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.pagination>li {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #333;
+    border-color: unset;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-control, output {
+    display: block;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+textarea {
+    overflow: hidden;
+    resize: vertical;
+}
+
+
+

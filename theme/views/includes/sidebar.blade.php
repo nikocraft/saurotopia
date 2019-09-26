@@ -94,14 +94,16 @@
         </button>
     </div>
 
-@if($widgetGroupVisible)
+
+    <div class="widget-group">
+    @if($widgetGroupVisible)
     @foreach($widgetsIds as $widgetId)
         @php
             $widgetGroupBlock = $widgets[$widgetId];
             $settings = $widgetGroupBlock->settings;
         @endphp
 
-        <div class="widget bg-sidebar flex-1" id="responsive-widget">
+        <div class="widget bg-sidebar responsive-widget">
             @if($settings->get('renderTitle'))
                 <div class="widget-header">
                     <{{ get_theme_setting('widgets.titleSize')}} class="widget-title">
@@ -116,8 +118,10 @@
                 ])@endcomponent
             </div>
         </div>
+
     @endforeach
-@endif
+    @endif
+    </div>
 
 <div class="footer-holder-sidebar">
     @include('includes/footer')
