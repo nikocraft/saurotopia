@@ -5,7 +5,7 @@
     @include('includes/head')
 </head>
 <body>
-<div class="ikigai" id="app">
+<div class="aurora" id="app">
     {{-- @include('includes/header') --}}
     @yield('content')
     {{-- @include('includes/footer') --}}
