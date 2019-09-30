@@ -1,6 +1,6 @@
-<div class="h-auto flex-col flex w-full bg-sidebar">
+<div class="navigation-sidebar">
         <!-- Mountains image -->
-        <div class="mx-auto pt-16 pb-6">
+        <div class="logo-positioning">
             @if(get_theme_setting('header.logo.logotype') == 'text')
         <a class="logo-link" href="{{ url('/') }}">
             {{ get_website_setting('website.title') }}
@@ -12,59 +12,59 @@
     @endif
         </div>
         <!-- Slogan -->
-        <h6 class="text-center mx-auto font-sans text-xl font-semibold pb-8 w-62 text-slogan">
+        <h6 class="slogan">
             Aurora is a minimal and clean Laraone blog theme.
         </h6>
         <!-- Social Media icons -->
-        <div class="text-center flex justify-center items-center pb-16 mdxl:border-b w-8/12 mx-auto w-8/12 border-sidebar-1">
+        <div class="social-icons-container">
             <div class="pr-4">
                 <a href="#">
-                    <i class="fab fa-facebook-f text-2xl hover:text-gray-400 text-white"></i>
+                    <i class="fab fa-facebook-f social-icon"></i>
                 </a>
             </div>
             <div class="pr-4">
                 <a href="#">
-                    <i class="fab fa-twitter fa-lg text-2xl hover:text-gray-400 text-white"></i>
+                    <i class="fab fa-twitter fa-lg social-icon"></i>
                 </a>
             </div>
             <div class="pr-4">
                 <a href="#">
-                    <i class="fab fa-instagram text-2xl hover:text-gray-400 text-white"></i>
+                    <i class="fab fa-instagram social-icon"></i>
                 </a>
             </div>
             <div class="pr-4">
                 <a href="#">
-                    <i class="fab fa-linkedin-in text-2xl hover:text-gray-400 text-white"></i>
+                    <i class="fab fa-linkedin-in social-icon"></i>
                 </a>
             </div>
             <div>
                 <a href="#">
-                    <i class="fab fa-google-plus-g fa-lg text-2xl hover:text-gray-400 text-white"></i>
+                    <i class="fab fa-google-plus-g fa-lg social-icon"></i>
                 </a>
             </div>
         </div>
         <!-- Responsive wrapper -->
         <div class="hidden" id="responsive-menu">
             <!-- Horizontal border line -->
-            <div class="border-t text-center mx-auto w-8/12 border-sidebar-2">
+            <div class="horizontal-border-line">
             </div>
             <!-- Menu -->
             @php
                 $menu = get_menu('header');
             @endphp
-            <section class="flex flex-col mx-auto py-20 w-8/12">
+            <section class="navigation-sidebar-menu">
                 <div class="menu">
                 @if($menu)
                 @foreach ($menu as $key => $item)
                     <div class="menu-item @if($item->subItems->count()) dropdown @endif @if(!$item->subItems->count()) pb-2 @endif">
                         @if($item->parent_id == null)
-                            <a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/{{ $item->url }}">{{ $item->title }}</a>
+                            <a class="navigation-sidebar-menu-items" href="/{{ $item->url }}">{{ $item->title }}</a>
                         @endif
 
                         @if($item->subItems->count())
                             <div class="dropdown-content animated zoomIn faster">
                             @foreach ($item->subItems as $key => $subItem)
-                                <div class="drop-menu-item pb-2"><a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/{{ $subItem->url }}">{{ $subItem->title }}</a></div>
+                                <div class="drop-menu-item pb-2"><a class="navigation-sidebar-menu-items" href="/{{ $subItem->url }}">{{ $subItem->title }}</a></div>
                             @endforeach
                             </div>
                         @endif
@@ -73,23 +73,23 @@
             @else
 
                 <div class="menu-item pb-2">
-                        <a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/">Start</a>
+                        <a class="navigation-sidebar-menu-items" href="/">Start</a>
                     </div>
 
                     <div class="menu-item pb-2">
-                        <a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">Blog</a>
+                        <a class="navigation-sidebar-menu-items" href="/posts">Blog</a>
                     </div>
 
                     <div class="menu-item dropdown">
-                            <a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">Media</a>
+                            <a class="navigation-sidebar-menu-items" href="/posts">Media</a>
                         <div class="dropdown-content">
-                            <div class="drop-menu-item"><a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">Videos</a></div>
-                            <div class="drop-menu-item"><a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">Images</a></div>
+                            <div class="drop-menu-item"><a class="navigation-sidebar-menu-items" href="/posts">Videos</a></div>
+                            <div class="drop-menu-item"><a class="navigation-sidebar-menu-items" href="/posts">Images</a></div>
                         </div>
                     </div>
 
                     <div class="menu-item">
-                        <a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">About</a>
+                        <a class="navigation-sidebar-menu-items" href="/posts">About</a>
                     </div>
             @endif
         </div>
@@ -100,25 +100,25 @@
 <div class="responsive-menu-sidebar">
 
     <!-- Horizontal border line -->
-    <div class="border-t text-center mx-auto w-8/12 border-sidebar-2">
+    <div class="horizontal-border-line">
     </div>
     <!-- Menu -->
     @php
             $menu = get_menu('header');
             @endphp
-        <section class="flex flex-col mx-auto py-20 w-8/12">
+        <section class="navigation-sidebar-menu">
             <div class="menu">
             @if($menu)
             @foreach ($menu as $key => $item)
                 <div class="menu-item @if($item->subItems->count()) dropdown @endif @if(!$item->subItems->count()) pb-2 @endif">
                     @if($item->parent_id == null)
-                        <a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/{{ $item->url }}">{{ $item->title }}</a>
+                        <a class="navigation-sidebar-menu-items" href="/{{ $item->url }}">{{ $item->title }}</a>
                     @endif
 
                     @if($item->subItems->count())
                         <div class="dropdown-content animated zoomIn faster">
                         @foreach ($item->subItems as $key => $subItem)
-                            <div class="drop-menu-item pb-2"><a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/{{ $subItem->url }}">{{ $subItem->title }}</a></div>
+                            <div class="drop-menu-item pb-2"><a class="navigation-sidebar-menu-items" href="/{{ $subItem->url }}">{{ $subItem->title }}</a></div>
                         @endforeach
                         </div>
                     @endif
@@ -127,23 +127,23 @@
         @else
 
             <div class="menu-item pb-2">
-                    <a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/">Start</a>
+                    <a class="navigation-sidebar-menu-items" href="/">Start</a>
                 </div>
 
                 <div class="menu-item pb-2">
-                    <a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">Blog</a>
+                    <a class="navigation-sidebar-menu-items" href="/posts">Blog</a>
                 </div>
 
                 <div class="menu-item dropdown">
-                        <a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">Media</a>
+                        <a class="navigation-sidebar-menu-items" href="/posts">Media</a>
                     <div class="dropdown-content">
-                        <div class="drop-menu-item"><a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">Videos</a></div>
-                        <div class="drop-menu-item"><a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">Images</a></div>
+                        <div class="drop-menu-item"><a class="navigation-sidebar-menu-items" href="/posts">Videos</a></div>
+                        <div class="drop-menu-item"><a class="navigation-sidebar-menu-items" href="/posts">Images</a></div>
                     </div>
                 </div>
 
                 <div class="menu-item">
-                    <a class="text-xl text-white tracking-widest hover:text-gray-400 hover:no-underline" href="/posts">About</a>
+                    <a class="navigation-sidebar-menu-items" href="/posts">About</a>
                 </div>
         @endif
     </div>

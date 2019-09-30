@@ -1,6 +1,6 @@
 
-<div class="flex container container-aurora content-wrap bg-white">
-    <div class="sidebar sidebar-left sidebar-aurora h-full bg-sidebar responsive-height-sidebar" id="sidebar">
+<div class="sidebar-container container container-aurora content-wrap">
+    <div class="sidebar sidebar-left sidebar-aurora sidebar-wrapper" id="sidebar">
         @include('includes/sidebar')
     </div>
     <div class="content content-{{$pageType}} content-right">

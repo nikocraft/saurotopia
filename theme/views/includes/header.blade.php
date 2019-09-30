@@ -1,4 +1,4 @@
-{{-- <header> --}}
+<header>
         @php
             $menu = get_menu('header');
         @endphp
@@ -18,4 +18,4 @@
                 @break
             @default
         @endswitch
-    {{-- </header> --}}
+    </header>

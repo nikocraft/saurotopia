@@ -1,4 +1,4 @@
-<div class="flex flex-col h-auto height-sidebar-full">
+<div class="sidebar-content height-sidebar-full">
         @include('includes/header')
 @php
     $widgetGroup = get_widget_group('sidebar');
@@ -25,9 +25,21 @@
         list($widgets, $widgetsIds) = get_widgets($widgetGroup);
 @endphp
 
+<div class="hamburger-button responsive-menu">
+    <button class="hamburger {{ get_theme_setting('header.hamburger.button.style') }}" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+</div>
+
 {{-- Hamburger menu sidebar (visible from 992px screen width) --}}
-<div class="justify-center items-center hamburger-hidden hover:bg-green-400" id="hamburger">
-        <div class="hamburger-menu-title">{{ get_website_setting('website.title') }}</div>
+<div class="hamburger-menu-sidebar hamburger-hidden" id="hamburger">
+        @if(get_theme_setting('header.hamburger.logo.logotype') == 'image')
+            <img src="{{ get_theme_setting('header.hamburger.logo.logoImage') }}" alt="">
+        @else
+            <div class="hamburger-menu-title">{{ get_website_setting('website.title') }}</div>
+        @endif
         <div class="hamburger-menu">
             @if($menu)
                 @foreach ($menu as $key => $item)
@@ -86,13 +98,6 @@
             @endif
         </div>
 </div>
-<div class="responsive-menu justify-center focus:outline-none absolute hamburger-position">
-        <button class="hamburger {{ get_theme_setting('header.hamburger.button.style') }}" type="button">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-        </button>
-    </div>
 
 
     <div class="widget-group">

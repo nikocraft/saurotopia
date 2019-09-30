@@ -11,7 +11,7 @@
             <img src="{{ $post->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
         @endif
         <!-- Post section -->
-        <section class="mx-auto py-24 content-container">
+        <section class="index-post-positioning content-container">
                     <div class="post-meta-detail">
                             <div class="uppercase post-taxonomy">
                                 @taxonomy([
@@ -24,14 +24,14 @@
                 <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title pt-6"><a class="post-title-link" href="/{{ $post->type->slug }}/{{ $post->slug }}">{{ $post->title }}</a></{{ get_theme_setting('content.general.postTitle.size') }}>
             <div class="post-meta">
                 <div class="post-meta-detail">
-                    <p class="text-gray-500 text-lg lg:text-xl">Posted on {{ $post->created_at->format('Y-m-d') }} &nbsp; &bull; &nbsp; by &nbsp; </p><p class="text-green-400 hover:text-green-500 text-lg">{{ $post->author->username }}</p>
+                    <p class="post-meta-date">Posted on {{ $post->created_at->format('Y-m-d') }} &nbsp; &bull; &nbsp; by &nbsp; </p><p class="post-meta-author">{{ $post->author->username }}</p>
                 </div>
             </div>
                 <div class="post-excerpt pt-12">
                     {{ get_excerpt($post, get_theme_setting('content.general.excerptLength')) }}
                 </div>
             <div class="mt-12">
-                <a class="text-gray-500 border border-gray-400 hover:border-gray-500 rounded-full px-6 py-3" style="text-decoration: none;" href="/{{ $post->type->slug }}/{{ $post->slug }}">Read
+                <a class="read-more" style="text-decoration: none;" href="/{{ $post->type->slug }}/{{ $post->slug }}">Read
                     More</a>
             </div>
         </section>

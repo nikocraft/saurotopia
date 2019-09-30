@@ -52,12 +52,12 @@
             $hamburgerId.addClass("require-visible require-invisible-fullwidth-menu animated {{ get_theme_setting('header.hamburger.general.inAnimation') }} slow");
             $responsiveWidgetId.removeClass("animated {{ get_theme_setting('header.hamburger.general.outAnimation') }}");
             $responsiveWidgetId.addClass("widget justify-center require-visible animated {{ get_theme_setting('header.hamburger.general.inAnimation') }} slow responsive-first-widget");
-            $sidebarId.removeClass("responsive-height-sidebar");
+            $sidebarId.removeClass("");
             $responsiveWidgetId.removeClass("responsive-widget-hidden");
         } else {
             $hamburgerId.removeClass("animated {{ get_theme_setting('header.hamburger.general.inAnimation') }} slow");
             $responsiveWidgetId.removeClass("animated {{ get_theme_setting('header.hamburger.general.inAnimation') }} slow");
-            $sidebarId.addClass("responsive-height-sidebar");
+            $sidebarId.addClass("");
             $responsiveWidgetId.addClass("responsive-widget-hidden");
             window.setTimeout(function() {
                 $('#hamburger').addClass("animated {{ get_theme_setting('header.hamburger.general.outAnimation') }}");

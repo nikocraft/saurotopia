@@ -631,6 +631,21 @@ video {
   }
 }
 
+.read-more {
+  color: #a0aec0;
+  border-width: 1px;
+  border-color: #cbd5e0;
+  border-radius: 9999px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.btn-blue:hover {
+  border-color: #a0aec0;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

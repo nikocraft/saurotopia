@@ -24,7 +24,7 @@ body {
 }
 
 header {
-    height: 122px;
+    height: auto;
 }
 
 .header-wrap {
@@ -289,9 +289,7 @@ footer {
   }
 
 .responsive-menu {
-    display: flex;
-    flex: 1;
-    justify-content: center;
+    display: block;
 }
 
 .responsive-menu-sidebar {
@@ -421,7 +419,7 @@ footer {
     }
 
     .responsive-menu {
-        display: flex;
+        display: block;
     }
 }
 

@@ -2,4 +2,80 @@
 
 @tailwind components;
 
+.read-more {
+    @apply text-gray-500 border border-gray-400 rounded-full px-6 py-3;
+}
+.read-more:hover {
+    @apply border-gray-500;
+}
+.sidebar-container {
+    @apply flex bg-white;
+}
+.sidebar-wrapper {
+    @apply h-full bg-sidebar;
+}
+.sidebar-content {
+    @apply flex flex-col h-auto;
+}
+.hamburger-button {
+    @apply mx-auto pb-10;
+}
+.hamburger-button:focus {
+    @apply outline-none;
+}
+.hamburger-menu-sidebar {
+    @apply justify-center items-center;
+}
+.hamburger-menu-sidebar:hover {
+    @apply bg-green-400;
+}
+.navigation-sidebar {
+    @apply h-auto flex-col flex w-full bg-sidebar;
+}
+.logo-positioning {
+    @apply mx-auto pt-16 pb-6;
+}
+.slogan {
+    @apply text-center mx-auto font-sans text-xl font-semibold pb-8 w-62 text-slogan;
+}
+.social-icons-container {
+    @apply text-center flex justify-center items-center pb-16 w-8/12 mx-auto w-8/12 border-sidebar-1;
+}
+.social-icons-container:mdxl {
+    @apply border-b;
+}
+.social-icon {
+    @apply text-2xl text-white;
+}
+.social-icon:hover {
+    @apply text-gray-400;
+}
+.horizontal-border-line {
+    @apply border-t text-center mx-auto w-8/12 border-sidebar-2;
+}
+.navigation-sidebar-menu {
+    @apply flex flex-col mx-auto py-20 w-8/12;
+}
+.navigation-sidebar-menu-items {
+    @apply text-xl text-white tracking-widest;
+}
+.navigation-sidebar-menu-items:hover {
+    @apply text-gray-400 no-underline;
+}
+.index-post-positioning {
+    @apply mx-auto py-24;
+}
+.post-meta-date {
+    @apply text-gray-500 text-lg;
+}
+.post-meta-date:lg {
+    @apply text-xl;
+}
+.post-meta-author {
+    @apply text-green-400 text-lg;
+}
+.post-meta-author:hover {
+    @apply text-green-500;
+}
+
 @tailwind utilities;

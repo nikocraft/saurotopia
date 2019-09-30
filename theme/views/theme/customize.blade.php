@@ -54,8 +54,8 @@ header .menu .menu-item:hover {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'header.hamburger.button.color') ])
 }
 
-.hamburger.is-active .hamburger-inner, 
-.hamburger.is-active .hamburger-inner::before, 
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'header.hamburger.button.activeColor') ])
 }
@@ -69,7 +69,10 @@ header .menu .menu-item:hover {
 }
 
 #hamburger .hamburger-menu-title {
-    @style([ 'property' => 'color', 'value' => data_get($settings, 'header.hamburger.logo.color') ])
+    @if(data_get($settings, 'header.hamburger.logo.logotype') != 'image')
+        @style([ 'property' => 'color', 'value' => data_get($settings, 'header.hamburger.logo.fontColor') ])
+        @style([ 'property' => 'font-size', 'value' => data_get($settings, 'header.hamburger.logo.fontSize') ])
+    @endif
 }
 
 #hamburger .hamburger-menu-item a {
@@ -152,7 +155,7 @@ footer .footer-wrap {
         width: 100%;
     }
 }
-  
+
 @media (min-width: 992px) {
     .container {
         width: 100%;

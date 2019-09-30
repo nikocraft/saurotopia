@@ -16,16 +16,14 @@
     @elseif($content->featuredimage && empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
         <img src="{{ $content->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
     @endif
-    {{-- <div class="content-container">
-        <div class="post-meta">
-            <div class="post-meta-detail">
-                <div class="uppercase post-taxonomy">
-                    @taxonomy([
-                        'taxonomy' => 'Tags',
-                        'post' => $content,
-                        'commaSeparate' => false
-                    ]) @endtaxonomy
-                </div>
+    <div class="content-container">
+        <div class="post-meta-detail">
+            <div class="uppercase post-taxonomy">
+                @taxonomy([
+                    'taxonomy' => 'Tags',
+                    'post' => $content,
+                    'commaSeparate' => false
+                ]) @endtaxonomy
             </div>
         </div>
         @if($showTitle)
@@ -34,11 +32,11 @@
         @if($showMetaData)
             <div class="post-meta">
                 <div class="post-meta-detail">
-                    <p class="text-gray-500 text-lg lg:text-2xl">Posted on {{ $content->created_at->format('Y-m-d') }} &nbsp; &bull; &nbsp; by &nbsp; </p><p class="text-green-400 hover:text-green-500 text-lg lg:text-2xl"> {{ $content->author->username }}</p>
+                    <p class="post-meta-date">Posted on {{ $content->created_at->format('Y-m-d') }} &nbsp; &bull; &nbsp; by &nbsp; </p><p class="post-meta-author"> {{ $content->author->username }}</p>
                 </div>
             </div>
         @endif
-    </div> --}}
+    </div>
 
     <div class="content-container">
 
