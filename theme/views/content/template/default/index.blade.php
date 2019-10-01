@@ -8,8 +8,10 @@
                 <div class="post-featured-image" style='background-image: url({{ $post->featuredimage->original }});'></div>
             </a>
             @elseif($post->featuredimage && empty(get_theme_setting('content.general.featuredImage.indexPageHeight')))
-            <img src="{{ $post->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
-        @endif
+            <a class="post-image-link" href="/{{ $post->type->slug }}/{{ $post->slug }}">
+                <img src="{{ $post->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
+            </a>
+            @endif
         <!-- Post section -->
         <section class="index-post-positioning content-container">
                     <div class="post-meta-detail">

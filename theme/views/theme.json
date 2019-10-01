@@ -48,7 +48,7 @@
                         {
                             "label": "Background Color",
                             "key": "backgroundColor",
-                            "default": "#fbfbfb",
+                            "default": "#6C9AB1",
                             "type": "string",
                             "meta": { "uiType": "color" }
                         },
@@ -97,14 +97,14 @@
                         {
                             "label": "Family",
                             "key": "family",
-                            "default": "covik-sans, sans-serif",
+                            "default": "'Manjari', sans-serif",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         },
                         {
                             "label": "Color",
                             "key": "color",
-                            "default": "#222",
+                            "default": "#333",
                             "type": "string",
                             "meta": { "uiType": "color" }
                         },
@@ -168,24 +168,38 @@
                         {
                             "label": "Featured Image",
                             "key": "featuredImage",
-                            "default": "300",
+                            "default": "600px",
                             "type": "section",
                             "settings": [
                                 {
                                     "label": "Index Page Height",
                                     "key": "indexPageHeight",
-                                    "default": "300px",
+                                    "default": "600px",
                                     "type": "string",
                                     "meta": { "uiType": "input", "info": "Leave empty for full height" }
                                 },
                                 {
                                     "label": "Single Page Height",
                                     "key": "singlePageHeight",
-                                    "default": "300px",
+                                    "default": "600px",
                                     "type": "string",
                                     "meta": { "uiType": "input", "info": "Leave empty for full height" }
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "label": "Sidebar",
+                    "key": "sidebar",
+                    "type": "section",
+                    "settings": [
+                        {
+                            "label": "Background Color",
+                            "key": "backgroundColor",
+                            "default": "#27282b",
+                            "type": "string",
+                            "meta": { "uiType": "color" }
                         }
                     ]
                 },
@@ -218,7 +232,7 @@
                         {
                             "label": "Layout",
                             "key": "layout",
-                            "default": "content-fullwidth",
+                            "default": "sidebar-content",
                             "type": "string",
                             "meta": { "uiType": "contentLayoutSelector" }
                         },
@@ -260,14 +274,14 @@
                         {
                             "label": "Layout Single",
                             "key": "layout",
-                            "default": "content-sidebar",
+                            "default": "sidebar-content",
                             "type": "string",
                             "meta": { "uiType": "contentLayoutSelector" }
                         },
                         {
                             "label": "Layout Index",
                             "key": "layoutIndex",
-                            "default": "content-sidebar",
+                            "default": "sidebar-content",
                             "type": "string",
                             "meta": { "uiType": "contentLayoutSelector" }
                         },
@@ -370,20 +384,6 @@
                     "key": "general",
                     "type": "section",
                     "settings": [
-                        {
-                            "label": "Style",
-                            "key": "style",
-                            "default": "fullwidth",
-                            "type": "string",
-                            "meta": { "uiType": "select", "options": ["fullwidth", "boxed"] }
-                        },
-                        {
-                            "label": "Height",
-                            "key": "height",
-                            "default": "122px",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        },
                         {
                             "label": "Background Color",
                             "key": "backgroundColor",
@@ -596,14 +596,14 @@
                                 {
                                     "label": "Color",
                                     "key": "color",
-                                    "default": "#333",
+                                    "default": "#fff",
                                     "type": "string",
                                     "meta": { "uiType": "color" }
                                 },
                                 {
                                     "label": "Active Color",
                                     "key": "activeColor",
-                                    "default": "#333",
+                                    "default": "#fff",
                                     "type": "string",
                                     "meta": { "uiType": "color" }
                                 }
@@ -752,7 +752,7 @@
                         {
                             "label": "Background Color",
                             "key": "backgroundColor",
-                            "default": "#27313a",
+                            "default": "#27282B",
                             "type": "string",
                             "meta": { "uiType": "color" }
                         },
@@ -899,7 +899,7 @@
                         {
                             "label": "Font Source",
                             "key": "source-2",
-                            "default": "https://fonts.googleapis.com/css?family=Montserrat:400,700",
+                            "default": "https://fonts.googleapis.com/css?family=Manjari&display=swap",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         }

@@ -16,13 +16,6 @@ body {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'general.container.backgroundColor') ])
 }
 
-header {
-    @if(data_get($settings, 'header.general.style') == 'fullwidth')
-        @style([ 'property' => 'background-color', 'value' => data_get($settings, 'header.general.backgroundColor') ])
-    @endif
-    @style([ 'property' => 'height', 'value' => data_get($settings, 'header.general.height') ])
-}
-
 .header-wrap {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'header.general.backgroundColor') ])
 }
@@ -123,6 +116,9 @@ header .menu .menu-item:hover {
     @style([ 'property' => 'height', 'value' => data_get($settings, 'content.general.featuredImage.singlePageHeight') ])
 }
 
+#sidebar, .navigation-sidebar {
+    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'content.sidebar.backgroundColor') ])
+}
 
 .widget {
     @style([ 'property' => 'margin-bottom', 'value' => data_get($settings, 'widgets.spacing') ])
