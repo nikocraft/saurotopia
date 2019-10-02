@@ -190,20 +190,6 @@
                     ]
                 },
                 {
-                    "label": "Sidebar",
-                    "key": "sidebar",
-                    "type": "section",
-                    "settings": [
-                        {
-                            "label": "Background Color",
-                            "key": "backgroundColor",
-                            "default": "#27282b",
-                            "type": "string",
-                            "meta": { "uiType": "color" }
-                        }
-                    ]
-                },
-                {
                     "label": "Pagination",
                     "key": "pagination",
                     "type": "section",
@@ -375,8 +361,8 @@
             ]
         },
         {
-            "label": "Header",
-            "key": "header",
+            "label": "Sidebar",
+            "key": "sidebar",
             "type": "section",
             "settings": [
                 {
@@ -408,7 +394,7 @@
                         {
                             "label": "Font Color",
                             "key": "fontColor",
-                            "default": "#222",
+                            "default": "#9c9494",
                             "type": "string",
                             "meta": { "uiType": "color", "dependency": { "on": "logotype", "if": "text" } }
                         },
@@ -436,10 +422,31 @@
                     ]
                 },
                 {
+                    "label": "Horizontal border",
+                    "key": "border",
+                    "type": "section",
+                    "settings": [
+                        {
+                            "label": "Visibility",
+                            "key": "visibility",
+                            "default": "block",
+                            "type": "string",
+                            "meta": { "uiType": "select", "options": [ "block", "none" ] }
+                        }
+                    ]
+                },
+                {
                     "label": "Menu",
                     "key": "menu",
                     "type": "section",
                     "settings": [
+                        {
+                            "label": "Background Color",
+                            "key": "backgroundColor",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "color" }
+                        },
                         {
                             "label": "Item Padding",
                             "key": "itemPadding",
@@ -457,14 +464,14 @@
                         {
                             "label": "Item Font Color",
                             "key": "fontColor",
-                            "default": "#222",
+                            "default": "#fff",
                             "type": "string",
                             "meta": { "uiType": "color" }
                         },
                         {
                             "label": "Item Font Hover Color",
                             "key": "fontHoverColor",
-                            "default": "#444",
+                            "default": "#999",
                             "type": "string",
                             "meta": { "uiType": "color" }
                         },

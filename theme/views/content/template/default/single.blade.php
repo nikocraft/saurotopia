@@ -11,7 +11,7 @@
 @endphp
 
 <div class="post">
-        @if($content->featuredimage && !empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
+    @if($content->featuredimage && !empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
         <div class="post-featured-image" style='background-image: url({{ $content->featuredimage->original }});'></div>
     @elseif($content->featuredimage && empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
         <img src="{{ $content->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
@@ -40,56 +40,56 @@
 
     <div class="content-container">
 
-    @include('content/template/default/partials/content')
+        @include('content/template/default/partials/content')
 
-    @if($showAuthorBio)
-        <div class="post-author">
-            <div class="post-author-image"><img style="width: 120px;" class="img-responsive" src="{{ get_gravatar($content->author->email) }}" /></div>
-            <div class="post-author-details">
-                <div class="post-author-name">About {{ $content->author->firstname }} {{ $content->author->lastname }}</div>
-                <div class="post-author-bio">{{ $content->author->bio }}</div>
+        @if($showAuthorBio)
+            <div class="post-author">
+                <div class="post-author-image"><img style="width: 120px;" class="img-responsive" src="{{ get_gravatar($content->author->email) }}" /></div>
+                <div class="post-author-details">
+                    <div class="post-author-name">About {{ $content->author->firstname }} {{ $content->author->lastname }}</div>
+                    <div class="post-author-bio">{{ $content->author->bio }}</div>
+                </div>
             </div>
-        </div>
-    @endif
+        @endif
 
 
 
-@if($showComments)
-    @switch(get_website_setting('comments.type'))
-        @case('native')
-            <comments
-                :allow-nested={{ json_encode(get_website_setting('comments.allowNested')) }}
-                :max-depth="{{ get_website_setting('comments.nestedDepth') }}"
-                order="{{ get_website_setting('comments.order') }}"
-                :content-id={{ $content->id }}
-                :content-author-id={{ $content->author->id }}>
-            </comments>
-            @break
-        @case('disqus')
-            @if(!empty(get_website_setting('comments.disqusChannel')))
-                <div id="disqus_thread"></div>
-                @push('scripts')
-                    <script id="disqus_comments">
-                        var disqus_config = function () {
-                            this.page.url = '{{ route("frontend.posts.show", $content->slug) }}';  // Replace PAGE_URL with your page's canonical URL variable
-                            this.page.identifier = '{{ $content->id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                        };
-                        (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
-                            var d = document, s = d.createElement('script');
+        @if($showComments)
+            @switch(get_website_setting('comments.type'))
+                @case('native')
+                    <comments
+                        :allow-nested={{ json_encode(get_website_setting('comments.allowNested')) }}
+                        :max-depth="{{ get_website_setting('comments.nestedDepth') }}"
+                        order="{{ get_website_setting('comments.order') }}"
+                        :content-id={{ $content->id }}
+                        :content-author-id={{ $content->author->id }}>
+                    </comments>
+                    @break
+                @case('disqus')
+                    @if(!empty(get_website_setting('comments.disqusChannel')))
+                        <div id="disqus_thread"></div>
+                        @push('scripts')
+                            <script id="disqus_comments">
+                                var disqus_config = function () {
+                                    this.page.url = '{{ route("frontend.posts.show", $content->slug) }}';  // Replace PAGE_URL with your page's canonical URL variable
+                                    this.page.identifier = '{{ $content->id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                                };
+                                (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+                                    var d = document, s = d.createElement('script');
 
-                            s.src = 'https://{{ get_website_setting('comments.disqusChannel') }}.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+                                    s.src = 'https://{{ get_website_setting('comments.disqusChannel') }}.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
 
-                            s.setAttribute('data-timestamp', +new Date());
-                            (d.head || d.body).appendChild(s);
-                        })();
-                    </script>
-                    <script id="dsq-count-scr" src="//{{ get_website_setting('comments.disqusChannel') }}.disqus.com/count.js" async></script>
-                @endpush
-            @endif
-            @break
-        @default
-            {{-- defaults to no comments! --}}
-    @endswitch
-@endif
-</div>
+                                    s.setAttribute('data-timestamp', +new Date());
+                                    (d.head || d.body).appendChild(s);
+                                })();
+                            </script>
+                            <script id="dsq-count-scr" src="//{{ get_website_setting('comments.disqusChannel') }}.disqus.com/count.js" async></script>
+                        @endpush
+                    @endif
+                    @break
+                @default
+                {{-- defaults to no comments! --}}
+            @endswitch
+        @endif
+    </div>
 </div>

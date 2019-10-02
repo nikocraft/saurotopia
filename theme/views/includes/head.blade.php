@@ -47,9 +47,9 @@
 
 {{-- User Custom CSS --}}
 @if(get_theme_setting('css.customCss'))
-<style id="user-custom-css">
-    {{ get_theme_setting('css.customCss') }}
-</style>
+    <style id="user-custom-css">
+        {{ get_theme_setting('css.customCss') }}
+    </style>
 @endif
 
 {{-- Content Custom CSS --}}
