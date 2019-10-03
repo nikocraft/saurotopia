@@ -8,9 +8,6 @@
 
 @section('content')
     <div class="container container-aurora">
-        <div class="sidebar sidebar-wrapper" id="sidebar">
-            @include('includes/sidebar')
-        </div>
         <div class="content" style="padding: 64px;">
             @welcome()
             @endwelcome
