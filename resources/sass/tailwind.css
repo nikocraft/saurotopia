@@ -795,6 +795,7 @@ body {
   font-size: 13px;
   color: #333;
   height: 100%;
+  background-color: #6C9AB1;
 }
 
 .aurora {
@@ -802,7 +803,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100vh;
-  background-color: #6C9AB1;
 }
 
 header {
@@ -818,6 +818,7 @@ footer {
   background-color: #27282B;
   color: white;
   font-size: 12px;
+  padding-top: 15px;
 }
 
 .footer-wrap {
@@ -857,8 +858,8 @@ footer {
   padding-right: 0px !important;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   display: block;
   flex: 1;
 }

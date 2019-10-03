@@ -1,10 +1,9 @@
-
-<div class="container content-wrap">
-    <div class="content content-{{$pageType}} content-left">
-        @include('content/template/default/'.$pageType)
-    </div>
-
-    <div class="sidebar sidebar-right">
+<div class="container container-aurora">
+    <div class="sidebar sidebar-wrapper" id="sidebar">
         @include('includes/sidebar')
     </div>
+    <div class="content">
+        @include('content/template/default/'.$pageType)
+    </div>
 </div>
+

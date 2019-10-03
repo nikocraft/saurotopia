@@ -32,13 +32,6 @@
                             "meta": { "uiType": "input" }
                         },
                         {
-                            "label": "Background Color",
-                            "key": "backgroundColor",
-                            "default": "",
-                            "type": "string",
-                            "meta": { "uiType": "color" }
-                        },
-                        {
                             "label": "Spacing",
                             "key": "spacing",
                             "default": "40px",

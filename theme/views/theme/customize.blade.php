@@ -12,13 +12,9 @@ body {
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'general.font.size') ])
 }
 
-.content-wrap {
-    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'general.container.backgroundColor') ])
-}
-
 .container-aurora {
-    @style([ 'property' => 'padding-top', 'value' => data_get($settings, 'general.container.spacing') ])
-    @style([ 'property' => 'padding-bottom', 'value' => data_get($settings, 'general.container.spacing') ])
+    @style([ 'property' => 'margin-top', 'value' => data_get($settings, 'general.container.spacing') ])
+    @style([ 'property' => 'margin-bottom', 'value' => data_get($settings, 'general.container.spacing') ])
 }
 
 .responsive-menu-sidebar {
