@@ -7,9 +7,6 @@
 <body>
 <div class="aurora" id="app">
     @yield('content')
-    <div class="footer-holder-website container container-aurora bg-white">
-        @include('includes/footer')
-    </div>
 </div>
 
 <!-- Scripts -->
@@ -43,20 +40,23 @@
     $hamburger.on("click", function(e) {
         $hamburger.toggleClass("is-active");
         var $sidebarId = $("#sidebar");
-        var $responsiveWidgetId = $(".responsive-widget");
+        var $responsiveWidget = $(".responsive-widget");
         var $hamburgerId = $("#hamburger");
+        var $footer = $(".footer-holder-sidebar");
         if($hamburger.hasClass('is-active')) {
-            $hamburgerId.attr("class", "container container-aurora content-wrap");
+            $hamburgerId.attr("class", "container container-hamburger content-wrap");
             $hamburgerId.addClass("require-visible require-invisible-fullwidth-menu animated {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} slow");
-            $responsiveWidgetId.removeClass("animated {{ get_theme_setting('sidebar.hamburger.general.outAnimation') }}");
-            $responsiveWidgetId.addClass("widget justify-center require-visible animated {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} slow responsive-first-widget");
+            $responsiveWidget.removeClass("animated {{ get_theme_setting('sidebar.hamburger.general.outAnimation') }}");
+            $responsiveWidget.addClass("widget justify-center require-visible animated {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} slow responsive-first-widget");
             $sidebarId.removeClass("");
-            $responsiveWidgetId.removeClass("responsive-widget-hidden");
+            $responsiveWidget.removeClass("responsive-widget-hidden");
+            $footer.addClass("footer-visible");
         } else {
             $hamburgerId.removeClass("animated {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} slow");
-            $responsiveWidgetId.removeClass("animated {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} slow");
+            $responsiveWidget.removeClass("animated {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} slow");
             $sidebarId.addClass("");
-            $responsiveWidgetId.addClass("responsive-widget-hidden");
+            $responsiveWidget.addClass("responsive-widget-hidden");
+            $footer.removeClass("footer-visible");
             window.setTimeout(function() {
                 $('#hamburger').addClass("animated {{ get_theme_setting('sidebar.hamburger.general.outAnimation') }}");
                 $('.responsive-widget').addClass("animated {{ get_theme_setting('sidebar.hamburger.general.outAnimation') }}");

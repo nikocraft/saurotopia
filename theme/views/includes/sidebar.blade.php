@@ -1,4 +1,4 @@
-<div class="sidebar-content height-sidebar-full">
+<div class="sidebar-content">
     @include('includes/header')
     @php
         $widgetGroup = get_widget_group('sidebar');

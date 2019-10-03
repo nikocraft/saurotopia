@@ -16,6 +16,11 @@ body {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'general.container.backgroundColor') ])
 }
 
+.container-aurora {
+    @style([ 'property' => 'padding-top', 'value' => data_get($settings, 'general.container.spacing') ])
+    @style([ 'property' => 'padding-bottom', 'value' => data_get($settings, 'general.container.spacing') ])
+}
+
 .responsive-menu-sidebar {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'sidebar.menu.backgroundColor') ])
 }
@@ -120,14 +125,13 @@ a.logo-link:hover {
     @style([ 'property' => 'height', 'value' => data_get($settings, 'content.general.featuredImage.singlePageHeight') ])
 }
 
-#sidebar, .navigation-sidebar {
+#sidebar, .navigation-sidebar, .bg-sidebar {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'sidebar.general.backgroundColor') ])
 }
 
 .widget {
     @style([ 'property' => 'margin-bottom', 'value' => data_get($settings, 'widgets.spacing') ])
 }
-
 
 .widget .widget-title {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'widgets.titleColor') ])

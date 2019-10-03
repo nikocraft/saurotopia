@@ -12,7 +12,7 @@
     @apply flex bg-white;
 }
 .sidebar-wrapper {
-    @apply h-full bg-sidebar;
+    @apply bg-sidebar;
 }
 .sidebar-content {
     @apply flex flex-col h-auto;
@@ -122,6 +122,10 @@ footer {
     display: none;
 }
 
+.footer-visible {
+    display: block;
+}
+
 .footer-holder-website {
     display: block;
 }
@@ -144,6 +148,10 @@ footer {
     padding-right: 0px !important;
     margin-right: auto;
     margin-left: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: block;
+    flex: 1;
 }
 
 .block-link, .block-link:hover {
@@ -163,9 +171,6 @@ footer {
     .footer-holder-sidebar {
         display: block;
     }
-    .footer-holder-website {
-        display: none;
-    }
 }
 
 @media (min-width: 1200px) {
@@ -174,19 +179,19 @@ footer {
     }
 }
 
-.content-wrap {
+/* .content-wrap {
     display: block;
     flex: 1;
-}
+} */
 
 @media (min-width: 992px) {
-    .content-wrap {
+    .container-aurora {
         display: flex;
     }
 }
 
 @media (min-width: 1200px) {
-    .content-wrap {
+    .container-aurora {
         display: flex;
     }
 }
@@ -208,11 +213,12 @@ footer {
     width: 100%;
     height: auto;
     padding: 0px;
-}
-
-.sidebar-aurora {
     margin-right: 0px !important;
 }
+
+/* .sidebar-aurora {
+    margin-right: 0px !important;
+} */
 
 .sidebar-left {
     order: 1;
@@ -227,7 +233,7 @@ footer {
         width: 70%;
     }
 
-    .content-right {
+    .content {
         width: 70%;
     }
 
@@ -417,6 +423,7 @@ footer {
     background-color: #27282B;
     position: relative;
     top: 30px;
+    padding-bottom: 30px;
 }
 
 #hamburger .hamburger-menu-title {
@@ -481,6 +488,13 @@ footer {
     background-color: #fff;
 }
 
+.container-hamburger {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .hamburger {
     outline: none !important;
     color: #fff !important;
@@ -518,7 +532,7 @@ footer {
     .hamburger-hidden {
         display: none;
     }
-    .height-sidebar-full {
+    .sidebar-content {
         height: 100%;
     }
 
@@ -741,7 +755,6 @@ input[type="checkbox"][disabled] {
     padding: 5px 15px;
     color: rgb(255, 255, 255);
     background-color: #f6ad55;
-    margin-right: 5px;
     line-height: 20px;
     text-decoration: none;
     border-radius: 0.25rem;
@@ -834,6 +847,14 @@ input[type="checkbox"][disabled] {
     margin-bottom: 8px;
 }
 
+@media (max-width: 500px) {
+    .post-meta-date {
+        font-size: 11px;
+    }
+    .post-meta-author {
+        font-size: 11px;
+    }
+}
 /** Comments */
 .comments-load {
     display: flex;

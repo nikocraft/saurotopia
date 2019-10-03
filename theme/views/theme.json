@@ -37,6 +37,13 @@
                             "default": "",
                             "type": "string",
                             "meta": { "uiType": "color" }
+                        },
+                        {
+                            "label": "Spacing",
+                            "key": "spacing",
+                            "default": "40px",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
                         }
                     ]
                 },
