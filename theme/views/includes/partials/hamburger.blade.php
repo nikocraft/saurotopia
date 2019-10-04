@@ -1,3 +1,7 @@
+@php
+$menu = get_menu('header');
+@endphp
+
     <div class="hamburger-button responsive-menu">
         <button class="hamburger {{ get_theme_setting('sidebar.hamburger.button.style') }}" type="button">
             <span class="hamburger-box">

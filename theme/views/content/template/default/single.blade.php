@@ -17,30 +17,33 @@
         <img src="{{ $content->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
     @endif
     <div class="content-container">
-        <div class="post-meta-detail">
-            <div class="uppercase post-taxonomy">
-                @taxonomy([
-                    'taxonomy' => 'Tags',
-                    'post' => $content,
-                    'commaSeparate' => false
-                ]) @endtaxonomy
-            </div>
-        </div>
-        @if($showTitle)
-            <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title pt-6">{{ $content->title }}</{{ get_theme_setting('content.general.postTitle.size') }}>
-        @endif
-        @if($showMetaData)
-            <div class="post-meta">
-                <div class="post-meta-detail">
-                    <p class="post-meta-date">Posted on {{ $content->created_at->format('Y-m-d') }} &nbsp; &bull; &nbsp; by &nbsp; </p><p class="post-meta-author"> {{ $content->author->username }}</p>
+        <div class="post-meta-container">
+            <div class="post-meta-detail">
+                <div class="uppercase post-taxonomy">
+                    @taxonomy([
+                        'taxonomy' => 'Tags',
+                        'post' => $content,
+                        'commaSeparate' => false
+                    ]) @endtaxonomy
                 </div>
             </div>
-        @endif
-    </div>
+            @if($showTitle)
+                <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title pt-6">{{ $content->title }}</{{ get_theme_setting('content.general.postTitle.size') }}>
+            @endif
+            @if($showMetaData)
+                <div class="post-meta">
+                    <div class="post-meta-detail">
+                        <p class="post-meta-date">Posted on {{ $content->created_at->format('Y-m-d') }} &nbsp; &bull; &nbsp; by &nbsp; </p><p class="post-meta-author"> {{ $content->author->username }}</p>
+                    </div>
+                </div>
+            @endif
+        </div>
 
-    <div class="content-container">
+        @component('content.render.rootblocks', [
+        'rootBlocksIds' => $rootBlocksIds,
+        'allBlocks' => $allBlocks,
+        ])@endcomponent
 
-        @include('content/template/default/partials/content')
 
         @if($showAuthorBio)
             <div class="post-author">

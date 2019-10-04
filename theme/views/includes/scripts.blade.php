@@ -9,7 +9,7 @@
         var $sidebarId = $("#sidebar");
         var $responsiveWidget = $(".responsive-widget");
         var $hamburgerId = $("#hamburger");
-        var $footer = $(".footer-holder-sidebar");
+        var $footer = $(".footer-wrap");
         if($hamburger.hasClass('is-active')) {
             $hamburgerId.attr("class", "container container-hamburger content-wrap");
             $hamburgerId.addClass("require-visible require-invisible-fullwidth-menu animated {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} slow");

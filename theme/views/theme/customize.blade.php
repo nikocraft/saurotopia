@@ -1,3 +1,10 @@
+
+
+.container-aurora {
+    @style([ 'property' => 'margin-top', 'value' => data_get($settings, 'general.container.spacing') ])
+    @style([ 'property' => 'margin-bottom', 'value' => data_get($settings, 'general.container.spacing') ])
+}
+
 body {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'general.body.backgroundColor') ])
     @style([ 'property' => 'background-image', 'value' => data_get($settings, 'general.body.backgroundImage') ])
@@ -12,17 +19,12 @@ body {
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'general.font.size') ])
 }
 
-.container-aurora {
-    @style([ 'property' => 'margin-top', 'value' => data_get($settings, 'general.container.spacing') ])
-    @style([ 'property' => 'margin-bottom', 'value' => data_get($settings, 'general.container.spacing') ])
+.sidebar, .navigation-sidebar, .bg-sidebar {
+    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'sidebar.general.backgroundColor') ])
 }
 
 .responsive-menu-sidebar {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'sidebar.menu.backgroundColor') ])
-}
-
-.horizontal-border-line {
-    @style([ 'property' => 'display', 'value' => data_get($settings, 'sidebar.border.visibility') ])
 }
 
 header .menu .menu-item {
@@ -105,6 +107,10 @@ a.logo-link:hover {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'sidebar.logo.fontHoverColor') ])
 }
 
+.horizontal-border-line {
+    @style([ 'property' => 'display', 'value' => data_get($settings, 'sidebar.border.visibility') ])
+}
+
 .posts .post .post-title-link, .content-single .post .post-title {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'content.general.postTitle.color') ])
 }
@@ -119,10 +125,6 @@ a.logo-link:hover {
 
 .post div.post-featured-image {
     @style([ 'property' => 'height', 'value' => data_get($settings, 'content.general.featuredImage.singlePageHeight') ])
-}
-
-#sidebar, .navigation-sidebar, .bg-sidebar {
-    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'sidebar.general.backgroundColor') ])
 }
 
 .widget {

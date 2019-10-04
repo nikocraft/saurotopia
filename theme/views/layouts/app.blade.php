@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="aurora" id="app">
-        <div class="wrapper">
+        <div class="container container-aurora">
             <div class="sidebar">
                 @include('includes/sidebar')
             </div>
