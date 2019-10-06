@@ -1,7 +1,6 @@
 @php
     $widgetGroup = get_widget_group('sidebar');
     $widgetGroupVisible = false;
-    $menu = get_menu('header');
 
     switch ($pageType) {
         case 'single':
@@ -34,7 +33,7 @@
                 $settings = $widgetGroupBlock->settings;
             @endphp
 
-            <div class="widget bg-sidebar responsive-widget">
+            <div class="widget responsive-widget">
                 @if($settings->get('renderTitle'))
                     <div class="widget-header">
                         <{{ get_theme_setting('widgets.titleSize')}} class="widget-title">

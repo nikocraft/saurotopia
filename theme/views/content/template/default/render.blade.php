@@ -2,19 +2,21 @@
 
 @include('includes/seo')
 
+@section('sidebar')
+    @include('includes/sidebar')
+@endsection
+
 @section('content')
-
-    @if($pageType == 'single')
-        {{-- {{ $fontResources }} --}}
-        @include('content/template/default/single')
-    @elseif($pageType == 'index')
-    {{-- {{ $fontResources }} --}}
-        @include('content/template/default/index')
-    @else
-    {{-- {{ $fontResources }} --}}
-        @include('content/template/default/welcome')
-    @endif
-
+    @switch($pageType)
+        @case('single')
+            @include('content/template/default/single')
+            @break
+        @case('welcome')
+            @include('content/template/default/welcome')
+            @break
+        @default
+            @include('content/template/default/index')
+    @endswitch
 @endsection
 
 @push('scripts')

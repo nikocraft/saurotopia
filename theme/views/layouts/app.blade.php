@@ -8,7 +8,7 @@
     <div class="aurora" id="app">
         <div class="container container-aurora">
             <div class="sidebar">
-                @include('includes/sidebar')
+                @yield('sidebar')
             </div>
             <div class="content">
                 @yield('content')

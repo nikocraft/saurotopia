@@ -6,6 +6,9 @@ module.exports = {
         'mdxl': '992px',
     },
     variants: {},
+    corePlugins: {
+        container: false
+    },
     plugins: [
         function ({ addUtilities }) {
             const newUtilities = {
