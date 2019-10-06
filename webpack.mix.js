@@ -21,6 +21,7 @@ mix.setPublicPath('theme/assets')
     .sass('resources/sass/styles.scss', 'css/styles.css')
     .purgeCss({
         paths: () => glob.sync([
+            path.join(__dirname, 'resources/js/frontend/**/*.vue'),
             path.join(__dirname, 'theme/views/**/*.blade.php')
         ]),
     })

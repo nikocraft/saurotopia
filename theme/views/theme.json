@@ -899,14 +899,7 @@
                         {
                             "label": "Font Source",
                             "key": "source-1",
-                            "default": "https://use.typekit.net/owv5uoj.css",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        },
-                        {
-                            "label": "Font Source",
-                            "key": "source-2",
-                            "default": "https://fonts.googleapis.com/css?family=Manjari&display=swap",
+                            "default": "https://fonts.googleapis.com/css?family=Nunito&display=swap",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         }

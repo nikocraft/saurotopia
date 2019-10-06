@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .read-more {
-    @apply text-gray-500 border border-gray-400 rounded-full px-6 py-3;
+    @apply text-gray-500 border border-gray-400 rounded-sm px-6 py-3;
 }
 
 .read-more:hover {
@@ -14,18 +14,6 @@
 
 .sidebar-container {
     @apply flex bg-white;
-}
-
-.sidebar-wrapper {
-    @apply bg-sidebar;
-}
-
-.wrapper {
-    @apply flex;
-}
-
-.sidebar-content {
-    @apply flex flex-col h-auto;
 }
 
 .hamburger-button {
@@ -49,11 +37,18 @@
 }
 
 .logo-positioning {
-    @apply mx-auto pt-16 pb-6;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
 }
 
-.slogan {
-    @apply text-center mx-auto font-sans text-xl font-semibold pb-8 w-62 text-slogan;
+.tagline {
+    display: flex;
+    justify-content: center;
+    color: #c1c1c1;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .social-icons-container {
@@ -76,32 +71,20 @@
     @apply border-t text-center mx-auto w-8/12 border-sidebar-2;
 }
 
-.navigation-sidebar-menu {
-    @apply flex flex-col mx-auto py-20 w-8/12;
-}
-
-.navigation-sidebar-menu-items {
-    @apply text-xl text-white tracking-widest;
-}
-
-.navigation-sidebar-menu-items:hover {
-    @apply text-gray-400 no-underline;
-}
-
 .index-post-positioning {
     @apply mx-auto py-24;
 }
 
-.post-meta-date {
-    @apply text-gray-500 text-lg;
+.post-meta {
+    margin-top: 20px;
 }
 
-.post-meta-date:lg {
-    @apply text-xl;
+.post-meta-date {
+    @apply text-gray-500;
 }
 
 .post-meta-author {
-    @apply text-green-400 text-lg;
+    @apply text-green-400;
 }
 
 .post-meta-author:hover {
@@ -110,7 +93,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: 'Manjari', sans-serif;
+    font-family: 'Nunito', sans-serif;
     line-height: 25px;
     font-size: 13px;
     color: #333;
@@ -209,13 +192,21 @@ footer {
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
+        background-color: #216a94;
     }
 }
 
-/* .content-wrap {
-    display: block;
-    flex: 1;
-} */
+@media (min-width: 1500px) {
+    .container {
+        width: 1375px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .container {
+        width: 1575px;
+    }
+}
 
 @media (min-width: 992px) {
     .container-aurora {
@@ -234,21 +225,12 @@ footer {
     background-color: #fff;
 }
 
-.content-left {
-    order: 1;
-}
-
-.content-right {
-    order: 2;
-}
-
 .sidebar {
     width: 100%;
     height: auto;
-    padding: 40px;
+    padding: 50px;
     margin-right: 0px !important;
     background-color: #262930;
-    // background-color: red;
     display: flex;
     flex-direction: column;
 }
@@ -257,59 +239,22 @@ footer {
     margin-right: 0px !important;
 } */
 
-.sidebar-left {
-    order: 1;
-}
-
-.sidebar-right {
-    order: 2;
-}
-
 @media (min-width: 992px) {
-    .content-left {
-        width: 70%;
-    }
-
     .content {
-        width: 70%;
+        width: 75%;
     }
 
     .sidebar {
-        width: 30%;
+        width: 25%;
         min-height: 100vh;
-    }
-
-    .sidebar-left {
-        margin-right: 30px;
-    }
-
-    .sidebar-right {
-        margin-left: 30px;
     }
 }
 
 @media (min-width: 1200px) {
-    .content-left {
-        width: 70%;
-    }
-
-    .content-right {
-        width: 70%;
-    }
-
     .sidebar {
-        width: 30%;
-    }
-
-    .sidebar-left {
-        margin-right: 30px;
-    }
-
-    .sidebar-right {
-        margin-left: 30px;
+        width: 25%;
     }
 }
-
 
 .btn-primary {
     color: #fff;
@@ -323,23 +268,18 @@ footer {
     border-color: unset;
 }
 
-
-/** Navigation Container */
-.nav-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100%;
-    align-items: center;
-}
-
-.nav-container a:hover {
-    color: #444;
-    text-decoration: none;
-}
-
 .require-visible {
     display: block !important;
+}
+
+.navigation-sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 20px 0;
+}
+
+.navigation-sidebar-menu-items {
+    @apply text-xl text-white tracking-widest;
 }
 
 .menu {
@@ -356,7 +296,6 @@ footer {
     height: 100%;
     align-items: flex-start;
     font-size: 14px;
-    font-weight: bold;
 }
 
 .menu .menu-item a, .menu .drop-menu-item a {
@@ -365,7 +304,14 @@ footer {
     height: 100%;
     display: flex;
     align-items: flex-start;
-    padding: 5px 20px;
+    padding: 5px 0px;
+    text-decoration: none;
+    font-size: 16px;
+    word-spacing: 20px;
+}
+
+.menu .menu-item a:hover, .menu .drop-menu-item a:hover {
+    color: #cbd5e0;
 }
 
 .menu .drop-menu-item a {
@@ -373,11 +319,13 @@ footer {
 }
 
 .menu .drop-menu-item:hover {
-    background-color: rgba(1,1,1, 0.05);
+    // background-color: rgba(1,1,1, 0.05);
+    // color: #cbd5e0;
 }
 
 .menu .menu-item:hover {
-    background-color: #2c2c2c;
+    // color: #aaa;
+    // background-color: #2c2c2c;
 }
 
 .menu .dropdown {
@@ -389,12 +337,6 @@ footer {
 
 .menu .dropdown-content {
     display: none;
-    position: relative;
-    min-width: 220px;
-    height: max-content;
-    background-color: #2c2c2c;
-    padding: 6px 0px;
-    z-index: 90000;
   }
 
   .dropdown:hover .dropdown-content {
@@ -449,7 +391,6 @@ footer {
 }
 
 #hamburger {
-    background-color: #27282B;
     width: 100%;
     height: 100%;
     position: inherit;
@@ -458,7 +399,6 @@ footer {
 
 #hamburger .hamburger-menu {
     color: #fbfbfb;
-    background-color: #27282B;
     position: relative;
     top: 30px;
     padding-bottom: 30px;
@@ -638,7 +578,7 @@ footer {
 }
 
 a.logo-link {
-    color: #9c9494;
+    color: #fff;
     font-size: 24px;
 }
 
@@ -716,11 +656,6 @@ input[type="checkbox"][disabled] {
 
 
 /** Widget */
-.widget {
-    padding: 15px;
-
-}
-
 .widget-group {
     display: flex;
     flex-direction: column;
@@ -732,8 +667,9 @@ input[type="checkbox"][disabled] {
 }
 
 .widget .widget-title {
-    font-weight: 700;
+    font-weight: 100;
     padding: 0px 0px;
+    color: white;
 }
 
 .widget .widget-post {
@@ -808,7 +744,7 @@ input[type="checkbox"][disabled] {
 }
 
 .posts .post .post-excerpt {
-    margin: 5px 0 10px 0;
+    margin: 15px 0 10px 0;
 }
 
 .posts .post .post-read-more {

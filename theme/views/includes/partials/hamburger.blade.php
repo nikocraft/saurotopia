@@ -12,11 +12,6 @@ $menu = get_menu('header');
 
     {{-- Hamburger menu sidebar (visible from 992px screen width) --}}
     <div class="hamburger-menu-sidebar hamburger-hidden" id="hamburger">
-        @if(get_theme_setting('sidebar.hamburger.logo.logotype') == 'image')
-            <img src="{{ get_theme_setting('sidebar.hamburger.logo.logoImage') }}" alt="">
-        @else
-            <div class="hamburger-menu-title">{{ get_website_setting('website.title') }}</div>
-        @endif
         <div class="hamburger-menu">
             @if($menu)
                 @foreach ($menu as $key => $item)

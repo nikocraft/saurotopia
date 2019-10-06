@@ -22,13 +22,13 @@
                         ]) @endtaxonomy
                     </div>
                 </div>
-                <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title pt-6"><a class="post-title-link" href="/{{ $post->type->slug }}/{{ $post->slug }}">{{ $post->title }}</a></{{ get_theme_setting('content.general.postTitle.size') }}>
+                <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title"><a class="post-title-link" href="/{{ $post->type->slug }}/{{ $post->slug }}">{{ $post->title }}</a></{{ get_theme_setting('content.general.postTitle.size') }}>
                 <div class="post-meta">
                     <div class="post-meta-detail">
-                        <p class="post-meta-date">Posted on {{ $post->created_at->format('Y-m-d') }} &nbsp; &bull; &nbsp; by &nbsp; </p><p class="post-meta-author">{{ $post->author->username }}</p>
+                        <p class="post-meta-date">Posted on {{ $post->created_at->format('Y-m-d') }} by <span class="post-meta-author"> {{ $post->author->username }}</span> </p>
                     </div>
                 </div>
-                    <div class="post-excerpt pt-12">
+                    <div class="post-excerpt">
                         {{ get_excerpt($post, get_theme_setting('content.general.excerptLength')) }}
                     </div>
                 <div class="mt-12">

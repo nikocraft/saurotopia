@@ -36,26 +36,11 @@ module.exports = {
                 '.w-62': {
                     width: '62%',
                 },
-                '.text-slogan': {
-                    color: 'rgb(156, 148, 148)',
-                },
                 '.border-sidebar-1': {
                     borderColor: 'rgb(26, 26, 26)',
                 },
                 '.border-sidebar-2': {
                     borderColor: 'rgb(59, 59, 59)',
-                },
-                '.bg-sidebar-tag': {
-                    backgroundColor: 'rgba(88, 88, 88, 0.103)',
-                },
-                '.bg-body': {
-                    backgroundColor: '#6D9CB0',
-                },
-                '.text-size-1': {
-                    fontSize: '1rem',
-                },
-                '.bg-sidebar-search': {
-                    backgroundColor: '#2D2D2F',
                 },
                 '.ml-13p': {
                     marginLeft: '13%',
