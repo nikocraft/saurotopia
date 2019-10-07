@@ -28,7 +28,7 @@
                 </div>
             </div>
             @if($showTitle)
-                <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title pt-6">{{ $content->title }}</{{ get_theme_setting('content.general.postTitle.size') }}>
+                <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title">{{ $content->title }}</{{ get_theme_setting('content.general.postTitle.size') }}>
             @endif
             @if($showMetaData)
                 <div class="post-meta">
