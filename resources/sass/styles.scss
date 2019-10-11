@@ -3,5 +3,19 @@
 
 // Components styles
 @import "hamburgers.css";
-@import "components.scss";
-@import "theme.scss";
+@import "~auroracss-test/sass/components";
+@import "~auroracss-test/sass/theme";
+
+
+.post-term {
+    padding: 5px 15px;
+    color: rgb(255, 255, 255);
+    background-color: #f6ad55;
+    line-height: 20px;
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+.post-term:hover {
+    background-color: #fbd38d;
+}

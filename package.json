@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "auroracss-test": "0.0.3",
     "autoprefixer": "^9.6.1",
     "axios": "^0.18.0",
     "date-fns": "2.0.0-alpha.26",
