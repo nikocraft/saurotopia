@@ -41,6 +41,10 @@
     <link rel="stylesheet" href="{{asset('themes/'.$themeFolder.'/css/customize.css')}}?{{ str_random(7) }}">
 @endif
 
+{{-- @if(file_exists('themes/'.$themeFolder.'/css/output.css'))
+<link rel="stylesheet" href="{{asset('themes/'.$themeFolder.'/css/output.css')}}">
+@endif --}}
+
 {{-- User Custom CSS --}}
 @if(get_theme_setting('css.customCss'))
     <style id="user-custom-css">

@@ -22,13 +22,14 @@
         </div>
 
         <div class="post-footer">
-            <div class="post-taxonomy">
-                <i hidden class="post-term"></i>
-                @taxonomy([
-                    'taxonomy' => 'Tags',
-                    'post' => $post,
-                    'commaSeparate' => false
-                ]) @endtaxonomy
+            <div class="post-meta-detail">
+                <div class="post-taxonomy">
+                    @taxonomy([
+                        'taxonomy' => 'Tags',
+                        'post' => $post,
+                        'commaSeparate' => false
+                    ]) @endtaxonomy
+                </div>
             </div>
             {{-- <a class="post-read-more" href="/{{ $post->type->slug }}/{{ $post->slug }}">Read More</a> --}}
         </div>

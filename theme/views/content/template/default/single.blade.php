@@ -18,13 +18,14 @@
     @endif
     <div class="content-container">
         <div class="post-meta-container">
-            <div class="uppercase post-taxonomy">
-                <i hidden class="post-term"></i>
-                @taxonomy([
-                    'taxonomy' => 'Tags',
-                    'post' => $content,
-                    'commaSeparate' => false
-                ]) @endtaxonomy
+            <div class="post-meta-detail">
+                <div class="uppercase post-taxonomy">
+                    @taxonomy([
+                        'taxonomy' => 'Tags',
+                        'post' => $content,
+                        'commaSeparate' => false
+                    ]) @endtaxonomy
+                </div>
             </div>
             @if($showTitle)
                 <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title">{{ $content->title }}</{{ get_theme_setting('content.general.postTitle.size') }}>

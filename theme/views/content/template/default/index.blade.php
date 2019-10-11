@@ -13,13 +13,14 @@
             @endif
             <!-- Post section -->
             <section class="index-post-positioning content-container">
-                <div class="uppercase post-taxonomy">
-                    <i hidden class="post-term"></i>
-                    @taxonomy([
-                        'taxonomy' => 'Tags',
-                        'post' => $post,
-                        'commaSeparate' => false
-                    ]) @endtaxonomy
+                <div class="post-meta-detail">
+                    <div class="uppercase post-taxonomy">
+                        @taxonomy([
+                            'taxonomy' => 'Tags',
+                            'post' => $post,
+                            'commaSeparate' => false
+                        ]) @endtaxonomy
+                    </div>
                 </div>
                 <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title"><a class="post-title-link" href="/{{ $post->type->slug }}/{{ $post->slug }}">{{ $post->title }}</a></{{ get_theme_setting('content.general.postTitle.size') }}>
                 <div class="post-meta">
