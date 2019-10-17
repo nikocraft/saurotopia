@@ -6,32 +6,19 @@
     var $hamburger = $(".hamburger");
     $hamburger.on("click", function(e) {
         $hamburger.toggleClass("is-active");
-        var $sidebarId = $("#sidebar");
-        var $responsiveWidget = $(".responsive-widget");
         var $hamburgerId = $("#hamburger");
-        var $footer = $(".footer-wrap");
         if($hamburger.hasClass('is-active')) {
-            $hamburgerId.attr("class", "container container-hamburger content-wrap");
-            $hamburgerId.addClass("require-visible require-invisible-fullwidth-menu animated {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} slow");
-            $responsiveWidget.removeClass("animated {{ get_theme_setting('sidebar.hamburger.general.outAnimation') }}");
-            $responsiveWidget.addClass("widget justify-center require-visible animated {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} slow responsive-first-widget");
-            $sidebarId.removeClass("");
-            $responsiveWidget.removeClass("responsive-widget-hidden");
-            $footer.addClass("footer-visible");
+            $hamburgerId.attr("class", "hamburger-menu-active");
+            $hamburgerId.addClass("animated {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} fast");
         } else {
-            $hamburgerId.removeClass("animated {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} slow");
-            $responsiveWidget.removeClass("animated {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} slow");
-            $sidebarId.addClass("");
-            $responsiveWidget.addClass("responsive-widget-hidden");
-            $footer.removeClass("footer-visible");
+            $hamburgerId.removeClass("animated hamburger-menu-active {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} fast");
             window.setTimeout(function() {
-                $('#hamburger').addClass("animated {{ get_theme_setting('sidebar.hamburger.general.outAnimation') }}");
-                $('.responsive-widget').addClass("animated {{ get_theme_setting('sidebar.hamburger.general.outAnimation') }}");
+                $('#hamburger').addClass("animated {{ get_theme_setting('sidebar.hamburger.general.outAnimation') }} fast");
             }, 200);
             window.setTimeout(function() {
-                $('.responsive-widget').removeClass("require-visible responsive-first-widget animated {{ get_theme_setting('sidebar.hamburger.general.outAnimation') }}");
-                $('#hamburger').removeClass("require-visible");
-            }, 800);
+                $hamburgerId.removeClass("hamburger-menu-active {{ get_theme_setting('sidebar.hamburger.general.outAnimation') }}");
+                $hamburgerId.addClass("hamburger-menu-inactive");
+            }, 900);
         }
     });
 
