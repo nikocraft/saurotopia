@@ -1,0 +1,51 @@
+@tailwind base;
+
+$large-devices: 1200px;
+$medium-devices: 992px;
+$small-devices: 768px;
+$small-devices: 576px;
+
+body {
+    overflow-x: hidden;
+    font-family: 'Nunito', sans-serif;
+    line-height: 25px;
+    font-size: 13px;
+    color: #333;
+    height: 100%;
+    background-color: #6C9AB1;
+}
+
+.aurora {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 100%;
+    height: auto;
+    padding: 20px 50px 20px;
+    margin-right: 0px !important;
+    background-color: #262930;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 992px) {
+        width: 25%;
+        min-height: 100vh;
+    }
+
+    @media (min-width: 1200px) {
+        width: 25%;
+    }
+}
+
+.content {
+    width: 100%;
+    background-color: #fff;
+
+    @media (min-width: 992px) {
+        width: 75%;
+    }
+}

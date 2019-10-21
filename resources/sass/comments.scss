@@ -1,0 +1,63 @@
+/** Comments */
+.load-comments-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.comments {
+    margin-top: 35px;
+}
+
+.comment {
+    margin-bottom: 15px;
+}
+
+.comment-header {
+    margin-bottom: 5px;
+}
+
+.comment-body {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.comment-name {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.comment-author {
+    color: rgb(61, 120, 168);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.comment-member {
+    color: rgb(59, 109, 218);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.comment-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-reply {
+    align-self: flex-end;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 1.1em;
+    color: rgba(0,0,0,.4);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.comment-reply:hover {
+    color: rgba(0,0,0,.8);
+}
+
+.nested-comment {
+    padding-left: 30px;
+    margin-top: 15px;
+}

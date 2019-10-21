@@ -1,0 +1,66 @@
+.container-fluid::after, .container-fluid::before, .container::after, .container::before {
+    content: " ";
+}
+
+.container-aurora {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin: 40px auto;
+    display: block;
+    flex: 1;
+
+    @media (max-width: $large-devices) {
+        margin: 0px auto;
+    }
+}
+
+.container-wide :last-child {
+    margin-bottom: 0px !important;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.container .content .container {
+    width: unset;
+    padding: unset;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 100%;
+    }
+
+    .container-aurora {
+        display: flex;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+
+    .container-aurora {
+        display: flex;
+    }
+}
+
+@media (min-width: 1500px) {
+    .container {
+        width: 1375px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .container {
+        width: 1575px;
+    }
+}

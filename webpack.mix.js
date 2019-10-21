@@ -19,12 +19,6 @@ mix.webpackConfig({
 mix.setPublicPath('theme/assets')
     .js('resources/js/frontend/app.js', 'js')
     .sass('resources/sass/styles.scss', 'css/styles.css')
-    .purgeCss({
-        paths: () => glob.sync([
-            path.join(__dirname, 'resources/js/frontend/**/*.vue'),
-            path.join(__dirname, 'theme/views/**/*.blade.php')
-        ]),
-    })
     .options({
         processCssUrls: false,
         postCss: [ tailwindcss('./tailwind.config.js') ],

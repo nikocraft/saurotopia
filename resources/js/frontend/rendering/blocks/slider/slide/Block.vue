@@ -104,18 +104,6 @@
         width: 100%;
     }
 
-    .slide {
-        position: absolute;
-        overflow: hidden;
-        height: 100%;
-        width: 100%;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // min-height: 150px;
-        z-index: 10;
-    }
-
     .layers-fluid {
         position: absolute;
     }

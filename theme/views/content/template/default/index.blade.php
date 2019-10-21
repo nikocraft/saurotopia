@@ -12,28 +12,29 @@
                 </a>
             @endif
             <!-- Post section -->
-            <section class="index-post-positioning content-container">
-                <div class="post-meta-detail">
-                    <div class="uppercase post-taxonomy">
-                        @taxonomy([
-                            'taxonomy' => 'Tags',
-                            'post' => $post,
-                            'commaSeparate' => false
-                        ]) @endtaxonomy
-                    </div>
-                </div>
+            <section class="post-content-wrapper">
+                {{-- <div class="post-taxonomy">
+                    @taxonomy([
+                        'taxonomy' => 'Tags',
+                        'post' => $post,
+                        'commaSeparate' => false
+                    ]) @endtaxonomy
+                </div> --}}
                 <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title"><a class="post-title-link" href="/{{ $post->type->slug }}/{{ $post->slug }}">{{ $post->title }}</a></{{ get_theme_setting('content.general.postTitle.size') }}>
                 <div class="post-meta">
                     <div class="post-meta-detail">
-                        <p class="post-meta-date">Posted on {{ $post->created_at->format('Y-m-d') }} by <span class="post-meta-author"> {{ $post->author->username }}</span> </p>
+                        <div class="post-meta-date">Posted on {{ $post->created_at->format('Y-m-d') }}</div>
+                        <div class="post-meta-by">&nbsp; by &nbsp;</div>
+                        <div class="post-meta-author">{{ $post->author->username }}</div> 
                     </div>
                 </div>
+                @if(has_excerpt($post))
                     <div class="post-excerpt">
                         {{ get_excerpt($post, get_theme_setting('content.general.excerptLength')) }}
                     </div>
-                <div class="mt-12">
-                    <a class="read-more" style="text-decoration: none;" href="/{{ $post->type->slug }}/{{ $post->slug }}">Read
-                        More</a>
+                @endif
+                <div class="post-footer">
+                    <a class="post-read-more" style="text-decoration: none;" href="/{{ $post->type->slug }}/{{ $post->slug }}">Read More</a>
                 </div>
             </section>
         </div>

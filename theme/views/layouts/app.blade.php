@@ -10,7 +10,7 @@
             <div class="sidebar">
                 @yield('sidebar')
             </div>
-            <div class="content">
+            <div class="content content-{{$pageType}}">
                 @yield('content')
             </div>
         </div>

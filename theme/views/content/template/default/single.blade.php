@@ -16,38 +16,30 @@
     @elseif($content->featuredimage && empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
         <img src="{{ $content->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
     @endif
-    <div class="content-container">
-        <div class="post-meta-container">
-            <div class="post-meta-detail">
-                <div class="uppercase post-taxonomy">
-                    @taxonomy([
-                        'taxonomy' => 'Tags',
-                        'post' => $content,
-                        'commaSeparate' => false
-                    ]) @endtaxonomy
+    <div class="post-content-wrapper">
+        @if($showTitle)
+            <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title">{{ $content->title }}</{{ get_theme_setting('content.general.postTitle.size') }}>
+        @endif
+
+        @if($showMetaData)
+            <div class="post-meta">
+                <div class="post-meta-detail">
+                    <div class="post-meta-date">Posted on {{ $content->created_at->format('Y-m-d') }}</div>&nbsp; by &nbsp;<div class="post-meta-author">{{ $content->author->username }}</div> 
                 </div>
             </div>
-            @if($showTitle)
-                <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title">{{ $content->title }}</{{ get_theme_setting('content.general.postTitle.size') }}>
-            @endif
-            @if($showMetaData)
-                <div class="post-meta">
-                    <div class="post-meta-detail">
-                        <p class="post-meta-date">Posted on {{ $content->created_at->format('Y-m-d') }} &nbsp; &bull; &nbsp; by &nbsp; </p><p class="post-meta-author"> {{ $content->author->username }}</p>
-                    </div>
-                </div>
-            @endif
-        </div>
+        @endif
 
-        @component('content.render.rootblocks', [
-        'rootBlocksIds' => $rootBlocksIds,
-        'allBlocks' => $allBlocks,
-        ])@endcomponent
+        <div class="post-content-blocks" style="margin-bottom: 25px;">
+            @component('content.render.rootblocks', [
+            'rootBlocksIds' => $rootBlocksIds,
+            'allBlocks' => $allBlocks,
+            ])@endcomponent
+        </div>
 
 
         @if($showAuthorBio)
             <div class="post-author">
-                <div class="post-author-image"><img style="width: 120px;" class="img-responsive" src="{{ get_gravatar($content->author->email) }}" /></div>
+                <div class="post-author-image"><img class="img-responsive" src="{{ get_gravatar($content->author->email) }}" /></div>
                 <div class="post-author-details">
                     <div class="post-author-name">About {{ $content->author->firstname }} {{ $content->author->lastname }}</div>
                     <div class="post-author-bio">{{ $content->author->bio }}</div>

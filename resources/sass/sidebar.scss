@@ -1,0 +1,111 @@
+/** Sidebar Widget */
+.sidebar {
+    header {
+        height: auto;
+        margin-bottom: 25px;
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+
+            .logo-link {
+                color: #fff;
+                font-size: 24px;
+            }
+        }
+
+        .tagline {
+            display: flex;
+            justify-content: center;
+            color: #c1c1c1;
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .social-media-icons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            color: #fff;
+            padding-right: 1rem;
+
+            &:hover {
+                color: #cbd5e0;
+            }
+        }
+    }
+
+    footer {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    .widget-group {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0%;
+        margin-bottom: 20px;
+
+        .widget .header {
+            padding-bottom: 10px;
+        }
+        
+        .widget .title {
+            font-weight: 100;
+            padding: 0px 0px;
+            color: white;
+        }
+
+        .post {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+        }
+
+        .post-details {
+            flex: 1; 
+            display: flex; 
+            flex-direction: column;
+
+            .post-title-link {
+                display: block;
+                color: #d4d4d4;
+                line-height: 20px;
+                font-weight: 700;
+            }
+
+            .post-date {
+                font-size: 12px;
+                color: #b1b1b1;
+            }
+        }
+
+        .post-featured-image {
+            flex: 0.5; 
+            margin-right: 12px;
+
+            .background-image {
+                height: 70px;
+                background-position-y: center;
+                background-size: cover;
+            }
+
+            .no-background-image {
+                height: 70px;
+                background-color: rgba(255, 255, 255, 0.03);
+                justify-content: center;
+                align-content: center;
+            }
+        }
+    }
+
+}

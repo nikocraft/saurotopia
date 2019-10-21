@@ -1,9 +1,7 @@
 @include('includes/header')
 
-<div class="content-wrapper">
-    @include('includes/partials/hamburger')
-    @include('includes/partials/sidebar-widgets')
-    <footer>
-        @include('includes/footer')
-    </footer>
+<div class="sidebar-content-wrapper">
+    @include('includes/navigation')
+    @include('includes/sidebar-widgets')
+    @include('includes/footer')
 </div>
