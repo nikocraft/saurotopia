@@ -1,16 +1,39 @@
-.container-fluid::after, .container-fluid::before, .container::after, .container::before {
+.container::after,
+.container::before,
+.container-fluid::after,
+.container-fluid::before {
     content: " ";
 }
 
-.container-aurora {
+.container-wrapper {
     padding-left: 0px !important;
     padding-right: 0px !important;
     margin: 40px auto;
-    display: block;
+    display: flex;
     flex: 1;
 
     @media (max-width: $large-devices) {
         margin: 0px auto;
+    }
+
+    @media (max-width: $medium-devices) {
+        display: block;
+    }
+}
+
+.container {
+    width: 85%;
+    max-width: 1500px;
+
+    @media (max-width: $large-devices) {
+        width: 100%;
+    }
+}
+
+.container {
+    .content .container, .sidebar .container {
+        width: unset;
+        padding: unset;
     }
 }
 
@@ -20,47 +43,4 @@
 
 .container-fluid {
     width: 100%;
-}
-
-.container .content .container {
-    width: unset;
-    padding: unset;
-}
-
-@media (min-width: 768px) {
-    .container {
-        width: 100%;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        width: 100%;
-    }
-
-    .container-aurora {
-        display: flex;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
-
-    .container-aurora {
-        display: flex;
-    }
-}
-
-@media (min-width: 1500px) {
-    .container {
-        width: 1375px;
-    }
-}
-
-@media (min-width: 1800px) {
-    .container {
-        width: 1575px;
-    }
 }

@@ -5,8 +5,8 @@
     @include('includes/head')
 </head>
 <body>
-    <div class="aurora" id="app">
-        <div class="container container-aurora">
+    <div class="website" id="app">
+        <div class="container container-wrapper">
             <div class="sidebar">
                 @yield('sidebar')
             </div>

@@ -1,6 +1,6 @@
 
 
-.container-aurora {
+.container-wrapper {
     @style([ 'property' => 'margin-top', 'value' => data_get($settings, 'general.container.spacing') ])
     @style([ 'property' => 'margin-bottom', 'value' => data_get($settings, 'general.container.spacing') ])
 }

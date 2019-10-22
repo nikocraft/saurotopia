@@ -1,9 +1,9 @@
 @tailwind base;
 
-$large-devices: 1200px;
-$medium-devices: 992px;
-$small-devices: 768px;
-$small-devices: 576px;
+$large-devices:         1200px;
+$medium-devices:        992px;
+$small-devices:         768px;
+$extra-small-devices:   576px;
 
 body {
     overflow-x: hidden;
@@ -15,7 +15,7 @@ body {
     background-color: #6C9AB1;
 }
 
-.aurora {
+.website {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -23,7 +23,8 @@ body {
 }
 
 .sidebar {
-    width: 100%;
+    width: 25%;
+    min-width: 320px;
     height: auto;
     padding: 20px 50px 20px;
     margin-right: 0px !important;
@@ -31,21 +32,20 @@ body {
     display: flex;
     flex-direction: column;
 
-    @media (min-width: 992px) {
-        width: 25%;
-        min-height: 100vh;
+    @media (max-width: $large-devices) {
+        padding: 20px;
     }
 
-    @media (min-width: 1200px) {
-        width: 25%;
+    @media (max-width: $medium-devices) {
+        width: 100%;
     }
 }
 
 .content {
-    width: 100%;
+    width: 75%;
     background-color: #fff;
 
-    @media (min-width: 992px) {
-        width: 75%;
+    @media (max-width: $medium-devices) {
+        width: 100%;
     }
 }
