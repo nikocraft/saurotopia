@@ -2,12 +2,11 @@
 .sidebar {
     header {
         height: auto;
-        margin-bottom: 25px;
 
         .logo {
             display: flex;
             justify-content: center;
-            padding: 20px 0;
+            padding: 15px 0;
 
             .logo-link {
                 color: #fff;
@@ -21,12 +20,13 @@
             color: #c1c1c1;
             text-align: center;
             font-size: 14px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .social-media-icons {
             display: flex;
             justify-content: center;
+            margin-bottom: 15px;
         }
 
         .social-icon {
@@ -37,6 +37,14 @@
             &:hover {
                 color: #cbd5e0;
             }
+        }
+    }
+
+    .sidebar-content-wrapper {
+        display: block;
+
+        @media (max-width: $medium-devices) {
+            display: none;
         }
     }
 
@@ -95,7 +103,7 @@
 
             .background-image {
                 height: 70px;
-                background-position-y: center;
+                background-position-x: center;
                 background-size: cover;
             }
 
@@ -107,5 +115,4 @@
             }
         }
     }
-
 }

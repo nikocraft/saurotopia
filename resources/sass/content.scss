@@ -3,12 +3,36 @@
 
     .post-content-wrapper {
         padding: 64px;
+
+        // @media (max-width: $large-devices) {
+        //     height: 40vh;
+        // }
+
+        // @media (max-width: $medium-devices) {
+        //     height: 30vh;
+        // }
+
+        @media (max-width: $small-devices) {
+            padding: 32px;
+        }
     }
 
     .post-featured-image {
         height: 45vh;
         background-size: cover;
         background-position: center;
+
+        @media (max-width: $large-devices) {
+            height: 40vh;
+        }
+
+        @media (max-width: $medium-devices) {
+            height: 30vh;
+        }
+
+        @media (max-width: $small-devices) {
+            height: 25vh;
+        }
     }
 
     .post .post-title-link {

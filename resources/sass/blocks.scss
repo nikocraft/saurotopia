@@ -21,16 +21,11 @@
 
 /* Columns Block */
 .columns-block {
-    display: block;
+    display: flex;
     width: 100%;
-    @media (min-width: 900px) {
+    @media (max-width: $small-devices) {
         list-style: none;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        width: 100%;
+        display: block;
     }
 }
 
@@ -48,10 +43,10 @@
         margin-right: 0px !important;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: $small-devices) {
         width: 100% !important;
         margin: 0 !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 15px !important;
     }
 }
 

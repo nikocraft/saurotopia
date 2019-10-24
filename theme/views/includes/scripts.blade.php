@@ -6,18 +6,18 @@
     var $hamburgerBtn = $("#hamburger-button");
     $hamburgerBtn.on("click", function(e) {
         $hamburgerBtn.toggleClass("is-active");
-        var $hnavigation = $("#navigation");
+        var $sidebarContent = $("#sidebar-content");
         if($hamburgerBtn.hasClass('is-active')) {
-            $hnavigation.attr("class", "menu-active");
-            $hnavigation.addClass("animated {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} fast");
+            $sidebarContent.attr("class", "sidebar-content-active");
+            $sidebarContent.addClass("animated {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} fast");
         } else {
-            $hnavigation.removeClass("animated menu-active {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} fast");
+            $sidebarContent.removeClass("animated sidebar-content-active {{ get_theme_setting('sidebar.hamburger.general.inAnimation') }} fast");
             window.setTimeout(function() {
-                $('#hamburger-button').addClass("animated {{ get_theme_setting('sidebar.hamburger.general.outAnimation') }} fast");
+                $sidebarContent.addClass("animated {{ get_theme_setting('sidebar.hamburger.general.outAnimation') }} fast");
             }, 200);
             window.setTimeout(function() {
-                $hnavigation.removeClass("menu-active {{ get_theme_setting('sidebar.hamburger.general.outAnimation') }}");
-                $hnavigation.addClass("menu-inactive");
+                $sidebarContent.removeClass("sidebar-content-active {{ get_theme_setting('sidebar.hamburger.general.outAnimation') }}");
+                $sidebarContent.addClass("sidebar-content-inactive");
             }, 900);
         }
     });

@@ -35,7 +35,7 @@
 @endforeach
 
 {{-- {!!Theme::css('css/style.css')!!} --}}
-<link rel="stylesheet" href="{{mix('css/styles.css', 'themes/'.$themeFolder)}}">
+<link rel="stylesheet" href="{{ mix('css/styles.css', 'themes/'.$themeFolder) }}">
 
 @if(file_exists('themes/'.$themeFolder.'/css/customize.css'))
     <link rel="stylesheet" href="{{asset('themes/'.$themeFolder.'/css/customize.css')}}?{{ str_random(7) }}">
