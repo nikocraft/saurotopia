@@ -6,22 +6,48 @@ $small-devices:         768px;
 $extra-small-devices:   576px;
 
 
-$menu-font-size: 18px;
+$body-font-family: Nunito, sans-serif;
+$body-text-color: #333;
+$body-font-size: 13px;
+
+$headline1-size: 55px;
+$headline2-size: 45px;
+$headline3-size: 30px;
+$headline4-size: 25px;
+$headline5-size: 20px;
+$headline6-size: 15px;
+$headlines-line-height: 45px;
+
+$sidebar-bg: #262930;
+$content-bg: #fff;
+
+// Logo
+$logo-text-color: #fff;
+$logo-text-size: 24px;
+
+// Tagline
+$tagline-text-color: #c1c1c1;
+$tagline-font-size: 14px;
+
+// Sidebar Menu
 $menu-text-color: #eceef2;
+$menu-item-text-hover-color: #bdc7da;
+$menu-item-font-size: 18px;
+$menu-item-padding: 10px 0;
+$menu-item-text-transform: uppercase;
 
-// Body
-// $body-bg: #f5f8fa;
+// Drop Down Menu
+$menu-dropdown-item-padding: 5px 0 5px 20px;
+$menu-dropdown-item-text-transform: none;
 
-// Typography
-// $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-// $font-family-sans-serif: "Raleway", sans-serif;
-// $font-size-base: 14px;
-// $line-height-base: 1.6;
-// $text-color: #636b6f;
+// Social Icon
+$social-icon-color: #fff;
+$social-icon-hover-color: #cbd5e0;
+$social-icon-font-size: 1.5rem;
 
-// Navbar
-// $navbar-default-bg: #fff;
+// Footer
+$footer-text-color: #fff;
 
-// Buttons
-// $btn-default-color: $text-color;
-
+// Widgets
+$widget-post-title-link-color: #d4d4d4;
+$widget-post-date-color: #b1b1b1;
