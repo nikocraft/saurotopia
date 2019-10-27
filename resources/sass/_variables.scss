@@ -10,6 +10,9 @@ $body-font-family: Nunito, sans-serif;
 $body-text-color: #333;
 $body-font-size: 16px;
 
+$container-width: 85%;
+$container-max-width: 1500px;
+
 $headline1-size: 55px;
 $headline2-size: 45px;
 $headline3-size: 30px;
@@ -30,7 +33,7 @@ $tagline-text-color: #e4e4e4;
 $tagline-font-size: 14px;
 
 // Sidebar Menu
-$menu-text-color: #eceef2;
+$menu-text-color: #fff;
 $menu-item-text-hover-color: #bdc7da;
 $menu-item-font-size: 18px;
 $menu-item-padding: 10px 0;
@@ -51,3 +54,8 @@ $footer-text-color: #eceef2;
 // Widgets
 $widget-post-title-link-color: #ececec;
 $widget-post-date-color: #b1b1b1;
+
+$post-featured-image-height: 400px;
+$post-featured-image-height-large-devices: 350px;
+$post-featured-image-height-medium-devices: 300px;
+$post-featured-image-height-small-devices: 200px;

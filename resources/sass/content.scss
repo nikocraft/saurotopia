@@ -18,20 +18,20 @@
     }
 
     .post-featured-image {
-        height: 45vh;
+        height: $post-featured-image-height;
         background-size: cover;
         background-position: center;
 
         @media (max-width: $large-devices) {
-            height: 40vh;
+            height: $post-featured-image-height-large-devices;
         }
 
         @media (max-width: $medium-devices) {
-            height: 30vh;
+            height: $post-featured-image-height-medium-devices;
         }
 
         @media (max-width: $small-devices) {
-            height: 25vh;
+            height: $post-featured-image-height-small-devices;
         }
     }
 
