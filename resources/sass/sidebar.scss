@@ -2,6 +2,7 @@
 .sidebar {
     header {
         height: auto;
+        margin-bottom: 30px;
 
         .logo {
             display: flex;
@@ -20,7 +21,7 @@
             text-align: center;
             color: $tagline-text-color;
             font-size: $tagline-font-size;
-            margin-bottom: 15px;
+            margin-bottom: 35px;
         }
 
         .social-media-icons {
@@ -54,14 +55,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 15px;
     }
 
     .widget-group {
         display: flex;
         flex-direction: column;
         flex: 1 1 0%;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
 
         .widget .header {
             padding-bottom: 10px;
@@ -88,7 +88,7 @@
                 display: block;
                 color: $widget-post-title-link-color;
                 line-height: 20px;
-                font-weight: 700;
+                font-size: 14px;
             }
 
             .post-date {

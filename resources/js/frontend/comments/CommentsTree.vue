@@ -4,7 +4,7 @@
             <span v-if="comment.authorId == contentAuthorId" class="comment-author">{{comment.name}}</span>
             <span v-else-if="comment.authorId" class="comment-member">{{comment.name}}</span>
             <span v-else class="comment-name">{{comment.name}}</span>
-            <span v-localdate :format="'yyyy-MM-dd'" class="datetime">{{comment.created_at}}</span>
+            <span v-localdate :format="'yyyy-MM-dd'" class="comment-datetime">{{comment.created_at}}</span>
         </div>
 
         <div class="comment-body">
@@ -112,10 +112,3 @@
         }
     }
 </script>
-
-<style lang="scss">
-    .nested-comment {
-        padding-left: 30px;
-        margin-top: 15px;
-    }
-</style>

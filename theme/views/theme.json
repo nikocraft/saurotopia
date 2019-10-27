@@ -132,7 +132,7 @@
                         {
                             "label": "Excerpt Length",
                             "key": "excerptLength",
-                            "default": "300",
+                            "default": "500",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         },

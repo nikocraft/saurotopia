@@ -1,15 +1,13 @@
 #navigation {
     display: block;
-
-    .menu {
-        padding-bottom: 30px;
-    }
+    margin-bottom: 30px;
 
     .menu-item {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+        user-select: none;
 
         i {
             color: $menu-text-color;
