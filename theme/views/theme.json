@@ -27,14 +27,14 @@
                         {
                             "label": "Width",
                             "key": "width",
-                            "default": "1170px",
+                            "default": "85%",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         },
                         {
-                            "label": "Spacing",
-                            "key": "spacing",
-                            "default": "40px",
+                            "label": "Max Width",
+                            "key": "maxWidth",
+                            "default": "1500px",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         }
@@ -130,16 +130,22 @@
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Excerpt Length",
-                            "key": "excerptLength",
-                            "default": "500",
+                            "label": "Background Color",
+                            "key": "backgroundColor",
+                            "default": "white",
                             "type": "string",
-                            "meta": { "uiType": "input" }
+                            "meta": { "uiType": "color" }
+                        },
+                        {
+                            "label": "Color",
+                            "key": "color",
+                            "default": "white",
+                            "type": "string",
+                            "meta": { "uiType": "color" }
                         },
                         {
                             "label": "Post Title",
                             "key": "postTitle",
-                            "default": "300",
                             "type": "section",
                             "settings": [
                                 {
@@ -168,20 +174,19 @@
                         {
                             "label": "Featured Image",
                             "key": "featuredImage",
-                            "default": "600px",
                             "type": "section",
                             "settings": [
                                 {
                                     "label": "Index Page Height",
                                     "key": "indexPageHeight",
-                                    "default": "600px",
+                                    "default": "400px",
                                     "type": "string",
                                     "meta": { "uiType": "input", "info": "Leave empty for full height" }
                                 },
                                 {
                                     "label": "Single Page Height",
                                     "key": "singlePageHeight",
-                                    "default": "600px",
+                                    "default": "400px",
                                     "type": "string",
                                     "meta": { "uiType": "input", "info": "Leave empty for full height" }
                                 }
@@ -204,7 +209,7 @@
                         {
                             "label": "Per Page",
                             "key": "perPage",
-                            "default": "12",
+                            "default": "6",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         }
@@ -215,13 +220,6 @@
                     "key": "pages",
                     "type": "section",
                     "settings": [
-                        {
-                            "label": "Layout",
-                            "key": "layout",
-                            "default": "sidebar-content",
-                            "type": "string",
-                            "meta": { "uiType": "contentLayoutSelector" }
-                        },
                         {
                             "label": "Show Title",
                             "key": "showTitle",
@@ -257,20 +255,6 @@
                     "key": "posts",
                     "type": "section",
                     "settings": [
-                        {
-                            "label": "Layout Single",
-                            "key": "layout",
-                            "default": "sidebar-content",
-                            "type": "string",
-                            "meta": { "uiType": "contentLayoutSelector" }
-                        },
-                        {
-                            "label": "Layout Index",
-                            "key": "layoutIndex",
-                            "default": "sidebar-content",
-                            "type": "string",
-                            "meta": { "uiType": "contentLayoutSelector" }
-                        },
                         {
                             "label": "Show Title",
                             "key": "showTitle",
@@ -325,7 +309,7 @@
                 {
                     "label": "Title Color",
                     "key": "titleColor",
-                    "default": "#333",
+                    "default": "white",
                     "type": "string",
                     "meta": { "uiType": "color" }
                 },
@@ -373,7 +357,7 @@
                         {
                             "label": "Background Color",
                             "key": "backgroundColor",
-                            "default": "",
+                            "default": "#262930",
                             "type": "string",
                             "meta": { "uiType": "color" }
                         }
@@ -392,23 +376,16 @@
                             "meta": { "uiType": "select", "options": ["text", "image"] }
                         },
                         {
-                            "label": "Font Color",
+                            "label": "Color",
                             "key": "fontColor",
-                            "default": "#9c9494",
-                            "type": "string",
-                            "meta": { "uiType": "color", "dependency": { "on": "logotype", "if": "text" } }
-                        },
-                        {
-                            "label": "Font Hover Color",
-                            "key": "fontHoverColor",
-                            "default": "#111",
+                            "default": "#fff",
                             "type": "string",
                             "meta": { "uiType": "color", "dependency": { "on": "logotype", "if": "text" } }
                         },
                         {
                             "label": "Font Size",
                             "key": "fontSize",
-                            "default": "24px",
+                            "default": "32px",
                             "type": "string",
                             "meta": { "uiType": "input", "dependency": { "on": "logotype", "if": "text" } }
                         },
@@ -422,241 +399,37 @@
                     ]
                 },
                 {
-                    "label": "Horizontal border",
-                    "key": "border",
-                    "type": "section",
-                    "settings": [
-                        {
-                            "label": "Visibility",
-                            "key": "visibility",
-                            "default": "block",
-                            "type": "string",
-                            "meta": { "uiType": "select", "options": [ "block", "none" ] }
-                        }
-                    ]
-                },
-                {
-                    "label": "Menu",
+                    "label": "Navigation",
                     "key": "menu",
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Background Color",
-                            "key": "backgroundColor",
-                            "default": "",
-                            "type": "string",
-                            "meta": { "uiType": "color" }
-                        },
-                        {
                             "label": "Item Padding",
                             "key": "itemPadding",
-                            "default": "5px 20px",
+                            "default": "10px 0",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         },
                         {
                             "label": "Font Size",
                             "key": "fontSize",
-                            "default": "14px",
+                            "default": "18px",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         },
                         {
-                            "label": "Item Font Color",
+                            "label": "Color",
                             "key": "fontColor",
                             "default": "#fff",
                             "type": "string",
                             "meta": { "uiType": "color" }
                         },
                         {
-                            "label": "Item Font Hover Color",
+                            "label": "Hover Color",
                             "key": "fontHoverColor",
-                            "default": "#999",
+                            "default": "#bdc7da",
                             "type": "string",
                             "meta": { "uiType": "color" }
-                        },
-                        {
-                            "label": "Item Background Color",
-                            "key": "itemBackgroundColor",
-                            "default": "",
-                            "type": "string",
-                            "meta": { "uiType": "color" }
-                        },
-                        {
-                            "label": "Item Hover Background Color",
-                            "key": "itemHoverBackgroundColor",
-                            "default": "#e8edf0",
-                            "type": "string",
-                            "meta": { "uiType": "color" }
-                        },
-                        {
-                            "label": "Drop Down",
-                            "key": "dropdown",
-                            "type": "section",
-                            "settings": [
-                                {
-                                    "label": "Animation",
-                                    "key": "animation",
-                                    "default": "bounceIn",
-                                    "type": "string",
-                                    "meta": { "uiType": "select", "options": [
-                                        "none", "bounceIn", "flipInX", "flipInY"
-                                        ] }
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "label": "Hamburger",
-                    "key": "hamburger",
-                    "type": "section",
-                    "settings": [
-                        {
-                            "label": "General",
-                            "key": "general",
-                            "type": "section",
-                            "settings": [
-                                {
-                                    "label": "Background Color",
-                                    "key": "backgroundColor",
-                                    "default": "#222",
-                                    "type": "string",
-                                    "meta": { "uiType": "color" }
-                                },
-                                {
-                                    "label": "Enter Animation",
-                                    "key": "inAnimation",
-                                    "default": "bounceInRight",
-                                    "type": "string",
-                                    "meta": { "uiType": "select", "options": [
-                                        "bounceInLeft", "bounceInRight", "bounceInUp", "bounceInDown",
-                                        "zoomInLeft", "zoomInRight", "zoomInUp", "zoomInDown",
-                                        "slideInLeft", "slideInRight", "slideInUp", "slideInDown"
-                                        ] }
-                                },
-                                {
-                                    "label": "Exit Animation",
-                                    "key": "outAnimation",
-                                    "default": "bounceOutUp",
-                                    "type": "string",
-                                    "meta": { "uiType": "select", "options": [
-                                        "bounceOutLeft", "bounceOutRight", "bounceOutUp", "bounceOutDown",
-                                        "zoomOutLeft", "zoomOutRight", "zoomOutUp", "zoomOutDown",
-                                        "slideOutLeft", "slideOutRight", "slideOutUp", "slideOutDown"
-                                        ]
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "label": "Logo",
-                            "key": "logo",
-                            "type": "section",
-                            "settings": [
-                                {
-                                    "label": "Logo Type",
-                                    "key": "logotype",
-                                    "default": "text",
-                                    "type": "string",
-                                    "meta": { "uiType": "select", "options": ["text", "image"] }
-                                },
-                                {
-                                    "label": "Font Color",
-                                    "key": "fontColor",
-                                    "default": "#222",
-                                    "type": "string",
-                                    "meta": { "uiType": "color", "dependency": { "on": "logotype", "if": "text" } }
-                                },
-                                {
-                                    "label": "Font Size",
-                                    "key": "fontSize",
-                                    "default": "24px",
-                                    "type": "string",
-                                    "meta": { "uiType": "input", "dependency": { "on": "logotype", "if": "text" } }
-                                },
-                                {
-                                    "label": "Logo Image",
-                                    "key": "logoImage",
-                                    "default": "",
-                                    "type": "string",
-                                    "meta": { "uiType": "mediaLibrary", "dependency": { "on": "logotype", "if": "image" } }
-                                }
-                            ]
-                        },
-                        {
-                            "label": "Button",
-                            "key": "button",
-                            "type": "section",
-                            "settings": [
-                                {
-                                    "label": "Animation",
-                                    "key": "style",
-                                    "default": "hamburger--collapse",
-                                    "type": "string",
-                                    "meta": { "uiType": "select", "options": [
-                                        "hamburger--collapse", "hamburger--slider", "hamburger--squeeze", "hamburger--arrow",
-                                        "hamburger--arrowturn", "hamburger--spin", "hamburger--elastic", "hamburger--vortex",
-                                        "hamburger--stand", "hamburger--spring", "hamburger--spring", "hamburger--minus",
-                                        "hamburger--3dx", "hamburger--3dy"] }
-                                },
-                                {
-                                    "label": "Color",
-                                    "key": "color",
-                                    "default": "#fff",
-                                    "type": "string",
-                                    "meta": { "uiType": "color" }
-                                },
-                                {
-                                    "label": "Active Color",
-                                    "key": "activeColor",
-                                    "default": "#fff",
-                                    "type": "string",
-                                    "meta": { "uiType": "color" }
-                                }
-                            ]
-                        },
-                        {
-                            "label": "Menu Items",
-                            "key": "items",
-                            "type": "section",
-                            "settings": [
-                                {
-                                    "label": "Text Transform",
-                                    "key": "textTransform",
-                                    "default": "uppercase",
-                                    "type": "string",
-                                    "meta": { "uiType": "select", "options": [ "none", "capitalize", "uppercase", "lowercase" ] }
-                                },
-                                {
-                                    "label": "Spacing",
-                                    "key": "spacing",
-                                    "default": "10px",
-                                    "type": "string",
-                                    "meta": { "uiType": "input" }
-                                },
-                                {
-                                    "label": "Indent",
-                                    "key": "indent",
-                                    "default": "20px",
-                                    "type": "string",
-                                    "meta": { "uiType": "input" }
-                                },
-                                {
-                                    "label": "Font Size",
-                                    "key": "fontSize",
-                                    "default": "20px",
-                                    "type": "string",
-                                    "meta": { "uiType": "input" }
-                                },
-                                {
-                                    "label": "Font Color",
-                                    "key": "fontColor",
-                                    "default": "#fbfbfb",
-                                    "type": "string",
-                                    "meta": { "uiType": "color" }
-                                }
-                            ]
                         },
                         {
                             "label": "Drop-Down Items",
@@ -666,74 +439,62 @@
                                 {
                                     "label": "Text Transform",
                                     "key": "textTransform",
-                                    "default": "capitalize",
+                                    "default": "none",
                                     "type": "string",
                                     "meta": { "uiType": "select", "options": [ "none", "capitalize", "uppercase", "lowercase" ] }
                                 },
                                 {
-                                    "label": "Spacing",
-                                    "key": "spacing",
-                                    "default": "10px",
+                                    "label": "Padding",
+                                    "key": "itemPadding",
+                                    "default": "5px 0 10px 20px",
                                     "type": "string",
                                     "meta": { "uiType": "input" }
-                                },
-                                {
-                                    "label": "Indent",
-                                    "key": "indent",
-                                    "default": "40px",
-                                    "type": "string",
-                                    "meta": { "uiType": "input" }
-                                },
-                                {
-                                    "label": "Font Size",
-                                    "key": "fontSize",
-                                    "default": "20px",
-                                    "type": "string",
-                                    "meta": { "uiType": "input" }
-                                },
-                                {
-                                    "label": "Font Color",
-                                    "key": "fontColor",
-                                    "default": "#fbfbfb",
-                                    "type": "string",
-                                    "meta": { "uiType": "color" }
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "label": "Hamburger Menu",
+                    "key": "hamburger",
+                    "type": "section",
+                    "settings": [
+                        {
+                            "label": "Button Color",
+                            "key": "color",
+                            "default": "#fff",
+                            "type": "string",
+                            "meta": { "uiType": "color" }
                         },
                         {
-                            "label": "Drop-Down Buttons",
-                            "key": "dropDownButtons",
-                            "type": "section",
-                            "settings": [
-                                {
-                                    "label": "Open Icon",
-                                    "key": "openIcon",
-                                    "default": "fas fa-plus-circle",
-                                    "type": "string",
-                                    "meta": { "uiType": "input" }
-                                },
-                                {
-                                    "label": "Close Icon",
-                                    "key": "closeIcon",
-                                    "default": "fas fa-minus-circle",
-                                    "type": "string",
-                                    "meta": { "uiType": "input" }
-                                },
-                                {
-                                    "label": "Size",
-                                    "key": "fontSize",
-                                    "default": "22px",
-                                    "type": "string",
-                                    "meta": { "uiType": "input" }
-                                },
-                                {
-                                    "label": "Color",
-                                    "key": "fontColor",
-                                    "default": "#fbfbfb",
-                                    "type": "string",
-                                    "meta": { "uiType": "color" }
-                                }
-                            ]
+                            "label": "Button Active Color",
+                            "key": "activeColor",
+                            "default": "#fff",
+                            "type": "string",
+                            "meta": { "uiType": "color" }
+                        },
+                        {
+                            "label": "Enter Animation",
+                            "key": "inAnimation",
+                            "default": "bounceInDown",
+                            "type": "string",
+                            "meta": { "uiType": "select", "options": [
+                                "bounceInLeft", "bounceInRight", "bounceInUp", "bounceInDown",
+                                "zoomInLeft", "zoomInRight", "zoomInUp", "zoomInDown",
+                                "slideInLeft", "slideInRight", "slideInUp", "slideInDown"
+                                ] }
+                        },
+                        {
+                            "label": "Exit Animation",
+                            "key": "outAnimation",
+                            "default": "bounceOutUp",
+                            "type": "string",
+                            "meta": { "uiType": "select", "options": [
+                                "bounceOutLeft", "bounceOutRight", "bounceOutUp", "bounceOutDown",
+                                "zoomOutLeft", "zoomOutRight", "zoomOutUp", "zoomOutDown",
+                                "slideOutLeft", "slideOutRight", "slideOutUp", "slideOutDown"
+                                ]
+                            }
                         }
                     ]
                 }
@@ -750,44 +511,16 @@
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Style",
-                            "key": "style",
-                            "default": "fullwidth",
-                            "type": "string",
-                            "meta": { "uiType": "select", "options": ["fullwidth", "boxed"] }
-                        },
-                        {
-                            "label": "Background Color",
-                            "key": "backgroundColor",
-                            "default": "#27282B",
+                            "label": "Color",
+                            "key": "color",
+                            "default": "white",
                             "type": "string",
                             "meta": { "uiType": "color" }
                         },
                         {
-                            "label": "Font",
-                            "key": "font",
-                            "type": "section",
-                            "settings": [
-                                {
-                                    "label": "Color",
-                                    "key": "color",
-                                    "default": "white",
-                                    "type": "string",
-                                    "meta": { "uiType": "color" }
-                                },
-                                {
-                                    "label": "Size",
-                                    "key": "size",
-                                    "default": "12px",
-                                    "type": "string",
-                                    "meta": { "uiType": "input" }
-                                }
-                            ]
-                        },
-                        {
                             "label": "Copyright",
                             "key": "copyright",
-                            "default": "© Niko Craft",
+                            "default": "©",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         }
