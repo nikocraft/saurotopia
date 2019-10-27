@@ -14,7 +14,7 @@
     @if($content->featuredimage && !empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
         <div class="post-featured-image" style='background-image: url({{ $content->featuredimage->original }});'></div>
     @elseif($content->featuredimage && empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
-        <img src="{{ $content->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
+        <img src="{{ $content->featuredimage->original }}" class="img-responsive" alt="">
     @endif
     <div class="post-content-wrapper">
         @if($showTitle)

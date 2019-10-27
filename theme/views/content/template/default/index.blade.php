@@ -8,7 +8,7 @@
                 </a>
             @elseif($post->featuredimage && empty(get_theme_setting('content.general.featuredImage.indexPageHeight')))
                 <a class="post-image-link" href="/{{ $post->type->slug }}/{{ $post->slug }}">
-                    <img src="{{ $post->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
+                    <img src="{{ $post->featuredimage->original }}" class="img-responsive" alt="">
                 </a>
             @endif
             <!-- Post section -->
