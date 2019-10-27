@@ -18,8 +18,8 @@
 
         <div v-if="comment.status==2" style="font-weight: bold;">This comment is pending approval.</div>
 
-        <div v-if="allowNested && maxDepth >= currentDepth" class="nested-comment">
-            <comments-tree v-for="comment in comments" style="margin-bottom: 10px;"
+        <div v-if="comments.length && (allowNested && maxDepth >= currentDepth)" class="nested-comment">
+            <comments-tree v-for="comment in comments"
                 :comment="comment"
                 :depth="currentDepth"
                 :allowNested="allowNested"
