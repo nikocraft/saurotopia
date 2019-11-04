@@ -8,7 +8,11 @@
             @foreach ($menu as $key => $item)
                 <div class="menu-item @if($item->subItems->count()) dropdown @endif">
                     @if($item->parent_id == null)
-                        <a href="/{{ $item->url }}">{{ $item->title }}</a>
+                        @if($item->url)
+                            <a href="/{{ $item->url }}">{{ $item->title }}</a>
+                        @else
+                            <a id="open-menu-{{ $item->id }}">{{ $item->title }}</a>
+                        @endif
                         @if($item->subItems->count())
                             <i class="dropdown-button-open fas fa-plus-circle"></i>
                             <i class="dropdown-button-close fas fa-minus-circle"></i>
@@ -34,7 +38,7 @@
             </div>
 
             <div class="menu-item dropdown">
-                <a href="/posts">Example</a>
+                <a href="#" id="open-menu-1">Dropdown</a>
                 <i class="dropdown-button-open fas fa-plus-circle"></i>
                 <i class="dropdown-button-close fas fa-minus-circle"></i>
 
