@@ -157,3 +157,17 @@
 .text-block p {
     margin: 0 0 15px;
 }
+
+.block-link, .block-link:hover {
+    text-decoration: none;
+}
+
+.sidebar .widget .recent-post-title-link {
+    font-size: 16px;
+    color: #ececec;
+}
+
+.sidebar .widget .recent-post-date {
+    font-size: 14px;
+    color: #b1b1b1;
+}
