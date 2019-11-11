@@ -22,22 +22,33 @@
         }
     });
 
-    var $dropdownBtnOpen = $('.dropdown-button-open');
+    const $openMenuItem = $("[id^=open-menu-]");
+    $openMenuItem.on("click", function(event) {
+        const $dropdownBtnOpen = $(event.target).closest('.menu-item').find('.dropdown-button-open');
+        const $dropdownBtnClose = $(event.target).closest('.menu-item').find('.dropdown-button-close');
+
+        if($dropdownBtnOpen.is(":visible"))
+            $dropdownBtnOpen.trigger('click');
+        else {
+            $dropdownBtnClose.trigger('click');
+        }
+    });
+
+    const $dropdownBtnOpen = $('.dropdown-button-open');
     $dropdownBtnOpen.on("click", function(event) {
-        var $dropdownContent = $(event.target).closest('.menu-item').find('.dropdown-content');
-        var $dropdownBtnClose = $(event.target).closest('.menu-item').find('.dropdown-button-close');
+        const $dropdownContent = $(event.target).closest('.menu-item').find('.dropdown-content');
+        const $dropdownBtnClose = $(event.target).closest('.menu-item').find('.dropdown-button-close');
         $dropdownContent.show();
         $(event.target).hide();
         $dropdownBtnClose.show();
     });
 
-    var $dropdownBtnClose = $('.dropdown-button-close');
+    const $dropdownBtnClose = $('.dropdown-button-close');
     $dropdownBtnClose.on("click", function(event) {
-        var $dropdownContent = $(event.target).closest('.menu-item').find('.dropdown-content');
-        var $dropdownBtnOpen = $(event.target).closest('.menu-item').find('.dropdown-button-open');
+        const $dropdownContent = $(event.target).closest('.menu-item').find('.dropdown-content');
+        const $dropdownBtnOpen = $(event.target).closest('.menu-item').find('.dropdown-button-open');
         $dropdownContent.hide();
         $(event.target).hide();
         $dropdownBtnOpen.show();
     });
-
 </script>

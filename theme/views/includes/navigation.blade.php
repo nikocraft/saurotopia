@@ -8,10 +8,14 @@
             @foreach ($menu as $key => $item)
                 <div class="menu-item @if($item->subItems->count()) dropdown @endif">
                     @if($item->parent_id == null)
-                        <a href="/{{ $item->url }}">{{ $item->title }}</a>
+                        @if($item->url)
+                            <a href="/{{ $item->url }}">{{ $item->title }}</a>
+                        @else
+                            <a id="open-menu-{{ $item->id }}">{{ $item->title }}</a>
+                        @endif
                         @if($item->subItems->count())
-                            <i class="dropdown-button-open {{ get_theme_setting('sidebar.hamburger.dropDownButtons.openIcon') }}"></i>
-                            <i class="dropdown-button-close {{ get_theme_setting('sidebar.hamburger.dropDownButtons.closeIcon') }}"></i>
+                            <i class="dropdown-button-open fas fa-plus-circle"></i>
+                            <i class="dropdown-button-close fas fa-minus-circle"></i>
                         @endif
                     @endif
 
@@ -34,24 +38,13 @@
             </div>
 
             <div class="menu-item dropdown">
-                <a href="/posts">Media</a>
-                <i class="dropdown-button-open {{ get_theme_setting('sidebar.hamburger.dropDownButtons.openIcon') }}"></i>
-                <i class="dropdown-button-close {{ get_theme_setting('sidebar.hamburger.dropDownButtons.closeIcon') }}"></i>
+                <a href="#" id="open-menu-1">Dropdown</a>
+                <i class="dropdown-button-open fas fa-plus-circle"></i>
+                <i class="dropdown-button-close fas fa-minus-circle"></i>
 
                 <div class="dropdown-content">
-                    <div class="drop-menu-item"><a href="/posts">Videos</a></div>
-                    <div class="drop-menu-item"><a href="/posts">Images</a></div>
-                </div>
-            </div>
-
-            <div class="menu-item dropdown">
-                <a href="/posts">Community</a>
-                <i class="dropdown-button-open {{ get_theme_setting('sidebar.hamburger.dropDownButtons.openIcon') }}"></i>
-                <i class="dropdown-button-close {{ get_theme_setting('sidebar.hamburger.dropDownButtons.closeIcon') }}"></i>
-
-                <div class="dropdown-content">
-                    <div class="drop-menu-item"><a href="/posts">Videos</a></div>
-                    <div class="drop-menu-item"><a href="/posts">Images</a></div>
+                    <div class="drop-menu-item"><a href="/posts">Example 1</a></div>
+                    <div class="drop-menu-item"><a href="/posts">Example 2</a></div>
                 </div>
             </div>
 
