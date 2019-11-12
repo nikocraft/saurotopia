@@ -102,6 +102,7 @@
     .tabsbar {
         width: 100%;
         overflow: hidden;
+
         .tabsbar-item {
             outline: 0;
             user-select: none;
@@ -114,6 +115,18 @@
             cursor: pointer;
             white-space: nowrap;
             background-color: transparent;
+        }
+
+        .tab-item {
+            background-color: rgba(53, 101, 171, 0.05);
+    
+            &:hover {
+                background-color: rgba(53, 101, 171, 0.15);
+            }
+        }
+        
+        .active-tab-item {
+            background-color: rgba(53, 101, 171, 0.13);
         }
     }
 }
@@ -136,20 +149,6 @@
     .images-block-image {
         display: flex;
         flex-direction: column;
-    }
-}
-
-/** tabsbar item */
-.tabsbar {
-    .tab-item {
-        background-color: rgba(53, 101, 171, 0.05);
-
-        &:hover {
-            background-color: rgba(53, 101, 171, 0.15);
-        }
-    }
-    .active-tab-item {
-        background-color: rgba(53, 101, 171, 0.13);
     }
 }
 
