@@ -1,6 +1,5 @@
 let mix = require('laravel-mix');
 const path = require('path');
-const tailwindcss = require('tailwindcss');
 const glob = require('glob-all');
 require('laravel-mix-purgecss');
 
@@ -19,9 +18,5 @@ mix.webpackConfig({
 mix.setPublicPath('theme/assets')
     .js('resources/js/frontend/app.js', 'js')
     .sass('resources/sass/styles.scss', 'css/styles.css')
-    .options({
-        processCssUrls: false,
-        postCss: [ tailwindcss('./tailwind.config.js') ],
-    })
 
 mix.version();

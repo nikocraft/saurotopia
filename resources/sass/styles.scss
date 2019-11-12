@@ -1,14 +1,15 @@
+// reset styles
+@import "normalize";
+
 // third party hambuger styles
 @import "hamburgers.css";
 
+// theme variables
 @import "_variables.scss";
 
-// cms blocks
-@import "blocks.scss";
-
-// theme css
-@import "layout.scss";
+// theme styles
 @import "container.scss";
+@import "layout.scss";
 @import "common.scss";
 @import "sidebar.scss";
 @import "navigation.scss";
@@ -16,3 +17,6 @@
 @import "headlines.scss";
 @import "comments.scss";
 @import "pagination.scss";
+
+// cms blocks
+@import "blocks.scss";
