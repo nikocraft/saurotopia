@@ -1,0 +1,46 @@
+.container::after,
+.container::before,
+.container-fluid::after,
+.container-fluid::before {
+    content: " ";
+}
+
+.container {
+    width: $container-width;
+    max-width: $container-max-width;
+
+    @media (max-width: $large-devices) {
+        width: 100%;
+    }
+}
+
+.container {
+    .content .container, .sidebar .container {
+        width: unset;
+        padding: unset;
+    }
+}
+
+.container-wide :last-child {
+    margin-bottom: 0px !important;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.container-wrapper {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin: 40px auto;
+    display: flex;
+    flex: 1;
+
+    @media (max-width: $large-devices) {
+        margin: 0px auto;
+    }
+
+    @media (max-width: $medium-devices) {
+        display: block;
+    }
+}

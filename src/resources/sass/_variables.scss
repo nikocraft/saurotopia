@@ -1,0 +1,61 @@
+
+// media query break points
+$large-devices:         1200px;
+$medium-devices:        992px;
+$small-devices:         768px;
+$extra-small-devices:   576px;
+
+
+$body-font-family: Nunito, sans-serif;
+$body-text-color: #333;
+$body-font-size: 16px;
+
+$container-width: 85%;
+$container-max-width: 1500px;
+
+$headline1-size: 55px;
+$headline2-size: 45px;
+$headline3-size: 30px;
+$headline4-size: 25px;
+$headline5-size: 20px;
+$headline6-size: 15px;
+$headlines-line-height: 45px;
+
+$sidebar-bg: #262930;
+$content-bg: #fff;
+
+// Logo
+$logo-text-color: #fff;
+$logo-text-size: 32px;
+
+// Tagline
+$tagline-text-color: #e4e4e4;
+$tagline-font-size: 14px;
+
+// Sidebar Menu
+$menu-text-color: #fff;
+$menu-item-text-hover-color: #bdc7da;
+$menu-item-font-size: 18px;
+$menu-item-padding: 10px 0;
+$menu-item-text-transform: uppercase;
+
+// Drop Down Menu
+$menu-dropdown-item-padding: 5px 0 5px 20px;
+$menu-dropdown-item-text-transform: none;
+
+// Social Icon
+$social-icon-color: #fff;
+$social-icon-hover-color: #cbd5e0;
+$social-icon-font-size: 1.5rem;
+
+// Footer
+$footer-text-color: #eceef2;
+
+// Widgets
+$widget-post-title-link-color: #ececec;
+$widget-post-date-color: #b1b1b1;
+
+$post-featured-image-height: 400px;
+$post-featured-image-height-large-devices: 350px;
+$post-featured-image-height-medium-devices: 300px;
+$post-featured-image-height-small-devices: 200px;

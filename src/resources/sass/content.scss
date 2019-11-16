@@ -1,0 +1,120 @@
+/** Content Index & Single pages Styles */
+.content-index, .content-single {
+
+    .post-content-wrapper {
+        padding: 64px;
+
+        // @media (max-width: $large-devices) {
+        //     height: 40vh;
+        // }
+
+        // @media (max-width: $medium-devices) {
+        //     height: 30vh;
+        // }
+
+        @media (max-width: $small-devices) {
+            padding: 32px;
+        }
+    }
+
+    .post-featured-image {
+        height: $post-featured-image-height;
+        background-size: cover;
+        background-position: center;
+
+        @media (max-width: $large-devices) {
+            height: $post-featured-image-height-large-devices;
+        }
+
+        @media (max-width: $medium-devices) {
+            height: $post-featured-image-height-medium-devices;
+        }
+
+        @media (max-width: $small-devices) {
+            height: $post-featured-image-height-small-devices;
+        }
+    }
+
+    .post .post-title-link {
+        color: #444;
+    
+        &:hover {
+            color: #216a94;
+            text-decoration: none;
+        }
+    }
+
+    .post .post-meta {
+        margin-bottom: 20px;
+    }
+
+    .post-meta-detail {
+        display: flex;
+        margin-right: 15px;
+        color: #444444;
+    }
+    
+    .post-author {
+        display: flex;
+        flex-direction: row;
+        min-height: 100px;
+        margin-bottom: 25px;
+
+        .post-author-image {
+            min-width: 120px;
+            height: 115px;
+            margin-right: 15px;
+
+            img {
+                width: 100px;
+                border-radius: 50%;
+            }
+        }
+
+        .post-author-details {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .post-author-bio {
+            font-size: 14px;
+        }
+
+        .post-author-name {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+    }
+}
+
+/* Content Index Page Styles */
+.content-index {
+    .post-image-link {
+        display: block;
+        margin: 0px;
+    }
+
+    .post-excerpt {
+        margin: 15px 0 10px 0;
+    }
+
+    .post-read-more {
+        color: #a0aec0;
+        border-width: 1px;
+        border-color: #cbd5e0;
+        border-radius: 4px;
+        padding: 5px 25px;
+    
+        &:hover {
+            color: #6a7077;
+            border-color: #a0aec0;
+        }
+    }
+
+    .post-footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
