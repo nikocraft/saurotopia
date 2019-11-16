@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "9eac48dbf38321c1978904a24a3e891d",
@@ -1009,16 +1009,16 @@
         },
         {
             "name": "laraone/themedev",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laraone/themedev.git",
-                "reference": "fd857476f89caa33b9b8a6266a123c2318f89e97"
+                "reference": "ebda76b508e6f5066d92b78a6c6c7478cda52623"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laraone/themedev/zipball/fd857476f89caa33b9b8a6266a123c2318f89e97",
-                "reference": "fd857476f89caa33b9b8a6266a123c2318f89e97",
+                "url": "https://api.github.com/repos/laraone/themedev/zipball/ebda76b508e6f5066d92b78a6c6c7478cda52623",
+                "reference": "ebda76b508e6f5066d92b78a6c6c7478cda52623",
                 "shasum": ""
             },
             "require": {
@@ -1055,7 +1055,7 @@
                 }
             ],
             "description": "Theme Development Package for Laraone CMS",
-            "time": "2019-09-21T22:49:47+00:00"
+            "time": "2019-11-16T22:40:08+00:00"
         },
         {
             "name": "laravel-zero/foundation",
