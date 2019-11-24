@@ -57,18 +57,18 @@ body {
 }
 
 #navigation .menu .menu-item a {
-    @style([ 'property' => 'padding', 'value' => data_get($settings, 'sidebar.menu.itemPadding') ])
-    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'sidebar.menu.fontSize') ])
-    @style([ 'property' => 'color', 'value' => data_get($settings, 'sidebar.menu.fontColor') ])
+    @style([ 'property' => 'padding', 'value' => data_get($settings, 'sidebar.menu.items.padding') ])
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'sidebar.menu.items.fontSize') ])
+    @style([ 'property' => 'color', 'value' => data_get($settings, 'sidebar.menu.items.fontColor') ])
 }
 
 #navigation .menu .menu-item a:hover {
-    @style([ 'property' => 'color', 'value' => data_get($settings, 'sidebar.menu.fontHoverColor') ])
+    @style([ 'property' => 'color', 'value' => data_get($settings, 'sidebar.menu.items.fontHoverColor') ])
 }
 
 #navigation .menu .drop-menu-item > a {
-    @style([ 'property' => 'text-transform', 'value' => data_get($settings, 'sidebar.menu.dropDown.textTransform') ])
-    @style([ 'property' => 'padding', 'value' => data_get($settings, 'sidebar.menu.dropDown.itemPadding') ])
+    @style([ 'property' => 'text-transform', 'value' => data_get($settings, 'sidebar.menu.dropDownItems.textTransform') ])
+    @style([ 'property' => 'padding', 'value' => data_get($settings, 'sidebar.menu.dropDownItems.padding') ])
 }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {

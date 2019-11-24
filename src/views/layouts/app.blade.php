@@ -16,33 +16,21 @@
         </div>
     </div>
 
-    <!-- Scripts -->
+    <!-- Backend Routes -->
     @routes
 
     @php
-        $fontResources = get_theme_setting('resources.fonts');
-        $iconResources = get_theme_setting('resources.icons');
-        $cssResources = get_theme_setting('resources.css');
         $themeFolder = get_theme_folder();
     @endphp
 
-    <script src="{{ mix('js/app.js', 'themes/'.$themeFolder) }}"></script>
+    <!-- main script -->
+    <script src="{{ mix('js/app.js', 'themes/' . $themeFolder) }}"></script>
 
-    @php
-        $jsResources = get_theme_setting('resources.javascript');
-    @endphp
-
-    @foreach ( $jsResources as $key => $jsResource )
-        @if($jsResource)
-            <script id="{{ $key }}" src="{{ $jsResource }}"></script>
-        @endif
-    @endforeach
-
+    <!-- theme's custom js variables -->
     @include('includes/scripts')
 
+    <!-- scripts injected by specific views -->
     @stack('scripts')
-
     <noscript>Please enable JavaScript to view this website correctly.</noscript>
-
 </body>
 </html>

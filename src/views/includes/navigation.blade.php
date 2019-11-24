@@ -3,19 +3,18 @@
 @endphp
 
 <div id="navigation">
-    <div class="menu">
-        @if($menu)
+    @if($menu)
+        <div class="menu">
             @foreach ($menu as $key => $item)
                 <div class="menu-item @if($item->subItems->count()) dropdown @endif">
                     @if($item->parent_id == null)
                         @if($item->url)
-                            <a href="/{{ $item->url }}">{{ $item->title }}</a>
+                            <a id="menu-item-a-{{ $item->id }}" href="/{{ $item->url }}">{{ $item->title }}</a>
                         @else
-                            <a id="open-menu-{{ $item->id }}">{{ $item->title }}</a>
+                            <span id="menu-item-a-{{ $item->id }}" onclick="theme.dropDownMenuToggle(this.id)">{{ $item->title }}</span>
                         @endif
                         @if($item->subItems->count())
-                            <i class="dropdown-button-open fas fa-plus-circle"></i>
-                            <i class="dropdown-button-close fas fa-minus-circle"></i>
+                            <i id="dropdown-btn-{{ $item->id }}" onclick="theme.dropDownMenuToggle('menu-item-a-{{ $item->id }}')" class="fas fa-plus-circle"></i>
                         @endif
                     @endif
 
@@ -28,29 +27,10 @@
                     @endif
                 </div>
             @endforeach
-        @else
-            <div class="menu-item">
-                <a href="/">Start</a>
-            </div>
-
-            <div class="menu-item">
-                <a href="/posts">Blog</a>
-            </div>
-
-            <div class="menu-item dropdown">
-                <a href="#" id="open-menu-1">Dropdown</a>
-                <i class="dropdown-button-open fas fa-plus-circle"></i>
-                <i class="dropdown-button-close fas fa-minus-circle"></i>
-
-                <div class="dropdown-content">
-                    <div class="drop-menu-item"><a href="/posts">Example 1</a></div>
-                    <div class="drop-menu-item"><a href="/posts">Example 2</a></div>
-                </div>
-            </div>
-
-            <div class="menu-item">
-                <a href="/posts">About</a>
-            </div>
-        @endif
-    </div>
+        </div>
+    @else
+        <div class="no-menu">
+            <span>No Menu Created Yet</span>
+        </div>
+    @endif
 </div>

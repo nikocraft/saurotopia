@@ -17,7 +17,7 @@
     </h6>
 
     <!-- Social Media icons -->
-    <div class="social-media-icons">
+    {{-- <div class="social-media-icons">
         <div class="social-icon">
             <a href="#">
                 <i class="fab fa-facebook-f"></i>
@@ -33,10 +33,10 @@
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
-    </div>
+    </div> --}}
 
     <div class="hamburger-button-wrapper">
-        <button id="hamburger-button" class="hamburger hamburger--collapse" type="button">
+        <button id="hamburger-btn" onClick="theme.hamburgerToggle(this.id)" class="hamburger hamburger--collapse" type="button">
             <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
             </span>
