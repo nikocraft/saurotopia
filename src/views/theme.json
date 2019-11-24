@@ -195,58 +195,44 @@
                     ]
                 },
                 {
-                    "label": "Pagination",
-                    "key": "pagination",
-                    "type": "section",
-                    "settings": [
-                        {
-                            "label": "Type",
-                            "key": "type",
-                            "default": "simple",
-                            "type": "string",
-                            "meta": { "uiType": "select", "options": ["simple", "standard"] }
-                        },
-                        {
-                            "label": "Per Page",
-                            "key": "perPage",
-                            "default": "6",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        }
-                    ]
-                },
-                {
                     "label": "Pages",
                     "key": "pages",
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Show Title",
-                            "key": "showTitle",
-                            "default": false,
-                            "type": "boolean",
-                            "meta": { "uiType": "boolSelect" }
-                        },
-                        {
-                            "label": "Show Meta Data",
-                            "key": "showMetaData",
-                            "default": false,
-                            "type": "boolean",
-                            "meta": { "uiType": "boolSelect" }
-                        },
-                        {
-                            "label": "Show Author Bio",
-                            "key": "showAuthorBio",
-                            "default": false,
-                            "type": "boolean",
-                            "meta": { "uiType": "boolSelect" }
-                        },
-                        {
-                            "label": "Show Comments",
-                            "key": "showComments",
-                            "default": false,
-                            "type": "boolean",
-                            "meta": { "uiType": "boolSelect" }
+                            "label": "Settings",
+                            "key": "settings",
+                            "type": "section",
+                            "settings": [
+                                {
+                                    "label": "Show Title",
+                                    "key": "showTitle",
+                                    "default": false,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                },
+                                {
+                                    "label": "Show Meta Data",
+                                    "key": "showMetaData",
+                                    "default": false,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                },
+                                {
+                                    "label": "Show Author Bio",
+                                    "key": "showAuthorBio",
+                                    "default": false,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                },
+                                {
+                                    "label": "Show Comments",
+                                    "key": "showComments",
+                                    "default": false,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                }
+                            ]
                         }
                     ]
                 },
@@ -256,32 +242,39 @@
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Show Title",
-                            "key": "showTitle",
-                            "default": true,
-                            "type": "boolean",
-                            "meta": { "uiType": "boolSelect" }
-                        },
-                        {
-                            "label": "Show Meta Data",
-                            "key": "showMetaData",
-                            "default": true,
-                            "type": "boolean",
-                            "meta": { "uiType": "boolSelect" }
-                        },
-                        {
-                            "label": "Show Author Bio",
-                            "key": "showAuthorBio",
-                            "default": true,
-                            "type": "boolean",
-                            "meta": { "uiType": "boolSelect" }
-                        },
-                        {
-                            "label": "Show Comments",
-                            "key": "showComments",
-                            "default": true,
-                            "type": "boolean",
-                            "meta": { "uiType": "boolSelect" }
+                            "label": "Settings",
+                            "key": "settings",
+                            "type": "section",
+                            "settings": [
+                                {
+                                    "label": "Show Title",
+                                    "key": "showTitle",
+                                    "default": true,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                },
+                                {
+                                    "label": "Show Meta Data",
+                                    "key": "showMetaData",
+                                    "default": true,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                },
+                                {
+                                    "label": "Show Author Bio",
+                                    "key": "showAuthorBio",
+                                    "default": true,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                },
+                                {
+                                    "label": "Show Comments",
+                                    "key": "showComments",
+                                    "default": true,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                }
+                            ]
                         }
                     ]
                 }
@@ -399,41 +392,48 @@
                     ]
                 },
                 {
-                    "label": "Navigation",
+                    "label": "Menu",
                     "key": "menu",
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Item Padding",
-                            "key": "itemPadding",
-                            "default": "10px 0",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        },
-                        {
-                            "label": "Font Size",
-                            "key": "fontSize",
-                            "default": "18px",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        },
-                        {
-                            "label": "Color",
-                            "key": "fontColor",
-                            "default": "#fff",
-                            "type": "string",
-                            "meta": { "uiType": "color" }
-                        },
-                        {
-                            "label": "Hover Color",
-                            "key": "fontHoverColor",
-                            "default": "#bdc7da",
-                            "type": "string",
-                            "meta": { "uiType": "color" }
+                            "label": "Menu Items",
+                            "key": "items",
+                            "type": "section",
+                            "settings": [
+                                {
+                                    "label": "Item Padding",
+                                    "key": "padding",
+                                    "default": "10px 0",
+                                    "type": "string",
+                                    "meta": { "uiType": "input" }
+                                },
+                                {
+                                    "label": "Font Size",
+                                    "key": "fontSize",
+                                    "default": "18px",
+                                    "type": "string",
+                                    "meta": { "uiType": "input" }
+                                },
+                                {
+                                    "label": "Color",
+                                    "key": "fontColor",
+                                    "default": "#fff",
+                                    "type": "string",
+                                    "meta": { "uiType": "color" }
+                                },
+                                {
+                                    "label": "Hover Color",
+                                    "key": "fontHoverColor",
+                                    "default": "#bdc7da",
+                                    "type": "string",
+                                    "meta": { "uiType": "color" }
+                                }
+                            ]
                         },
                         {
                             "label": "Drop-Down Items",
-                            "key": "dropDown",
+                            "key": "dropDownItems",
                             "type": "section",
                             "settings": [
                                 {
@@ -445,7 +445,7 @@
                                 },
                                 {
                                     "label": "Padding",
-                                    "key": "itemPadding",
+                                    "key": "padding",
                                     "default": "5px 0 10px 20px",
                                     "type": "string",
                                     "meta": { "uiType": "input" }
@@ -630,62 +630,33 @@
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Font Source",
+                            "label": "Primary Font Source",
                             "key": "source-1",
                             "default": "https://fonts.googleapis.com/css?family=Nunito&display=swap",
                             "type": "string",
                             "meta": { "uiType": "input" }
+                        },
+                        {
+                            "label": "Secondary Font Source",
+                            "key": "source-2",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
                         }
                     ]
                 },
                 {
-                    "label": "Css",
-                    "key": "css",
+                    "label": "Icons",
+                    "key": "icons",
                     "type": "section",
                     "meta": { "hidden": true },
                     "settings": [
                         {
                             "label": "Source",
-                            "key": "icons",
+                            "key": "source-1",
                             "default": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css",
                             "type": "string",
                             "meta": { "uiType": "input" }
-                        },
-                        {
-                            "label": "Source",
-                            "key": "popup",
-                            "default": "https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css",
-                            "type": "string",
-                            "meta": { "uiType": "inputDisabled" }
-                        },
-                        {
-                            "label": "Source",
-                            "key": "animatecss",
-                            "default": "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css",
-                            "type": "string",
-                            "meta": { "uiType": "inputDisabled" }
-                        }
-                    ]
-                },
-                {
-                    "label": "Javascript",
-                    "key": "javascript",
-                    "type": "section",
-                    "meta": { "hidden": true },
-                    "settings": [
-                        {
-                            "label": "Source",
-                            "key": "jquery",
-                            "default": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js",
-                            "type": "string",
-                            "meta": { "uiType": "inputDisabled" }
-                        },
-                        {
-                            "label": "Source",
-                            "key": "magnific-popup",
-                            "default": "https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js",
-                            "type": "string",
-                            "meta": { "uiType": "inputDisabled" }
                         }
                     ]
                 }
