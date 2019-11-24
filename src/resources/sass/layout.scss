@@ -1,8 +1,8 @@
 body {
     overflow-x: hidden;
-    font-family: $body-font-family;
-    font-size: $body-font-size;
-    color: $body-text-color;
+    font-family: $bodyFontFamily;
+    font-size: $bodyFontSize;
+    color: $bodyTextColor;
     line-height: 25px;
     height: 100%;
     background-color: #6C9AB1;
@@ -21,24 +21,24 @@ body {
     height: auto;
     padding: 20px 30px;
     margin-right: 0px !important;
-    background-color: $sidebar-bg;
+    background-color: $sidebarBackgroundColor;
     display: flex;
     flex-direction: column;
 
-    @media (max-width: $large-devices) {
+    @media (max-width: $largeDevices) {
         padding: 20px;
     }
 
-    @media (max-width: $medium-devices) {
+    @media (max-width: $mediumDevices) {
         width: 100%;
     }
 }
 
 .content {
     width: 75%;
-    background-color: $content-bg;
+    background-color: $contentBackgroundColor;
 
-    @media (max-width: $medium-devices) {
+    @media (max-width: $mediumDevices) {
         width: 100%;
     }
 }

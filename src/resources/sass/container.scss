@@ -6,10 +6,10 @@
 }
 
 .container {
-    width: $container-width;
-    max-width: $container-max-width;
+    width: $containerWidth;
+    max-width: $containerMaxWidth;
 
-    @media (max-width: $large-devices) {
+    @media (max-width: $largeDevices) {
         width: 100%;
     }
 }
@@ -36,11 +36,11 @@
     display: flex;
     flex: 1;
 
-    @media (max-width: $large-devices) {
+    @media (max-width: $largeDevices) {
         margin: 0px auto;
     }
 
-    @media (max-width: $medium-devices) {
+    @media (max-width: $mediumDevices) {
         display: block;
     }
 }
