@@ -97,7 +97,7 @@
                         {
                             "label": "Family",
                             "key": "family",
-                            "default": "'Manjari', sans-serif",
+                            "default": "sans-serif",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         },
@@ -111,9 +111,16 @@
                         {
                             "label": "Size",
                             "key": "size",
-                            "default": "13px",
+                            "default": "16px",
                             "type": "string",
                             "meta": { "uiType": "px", "maxAllowed": 1 }
+                        },
+                        {
+                            "label": "Line Height",
+                            "key": "lineHeight",
+                            "default": "25px",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
                         }
                     ]
                 }
@@ -132,14 +139,14 @@
                         {
                             "label": "Background Color",
                             "key": "backgroundColor",
-                            "default": "white",
+                            "default": "",
                             "type": "string",
                             "meta": { "uiType": "color" }
                         },
                         {
                             "label": "Color",
                             "key": "color",
-                            "default": "white",
+                            "default": "",
                             "type": "string",
                             "meta": { "uiType": "color" }
                         },
@@ -158,7 +165,7 @@
                                 {
                                     "label": "Hover Color",
                                     "key": "hoverColor",
-                                    "default": "#444",
+                                    "default": "#216a94",
                                     "type": "string",
                                     "meta": { "uiType": "color" }
                                 },
@@ -281,41 +288,6 @@
             ]
         },
         {
-            "label": "Widgets",
-            "key": "widgets",
-            "type": "section",
-            "settings": [
-                {
-                    "label": "Title Size",
-                    "key": "titleSize",
-                    "default": "h4",
-                    "type": "string",
-                    "meta": { "uiType": "select", "options": ["h1", "h2", "h3", "h4", "h5", "h6"] }
-                },
-                {
-                    "label": "Title Text Style",
-                    "key": "titleStyle",
-                    "default": "capitalize",
-                    "type": "string",
-                    "meta": { "uiType": "select", "options": [ "none", "capitalize", "uppercase", "lowercase" ] }
-                },
-                {
-                    "label": "Title Color",
-                    "key": "titleColor",
-                    "default": "white",
-                    "type": "string",
-                    "meta": { "uiType": "color" }
-                },
-                {
-                    "label": "Spacing",
-                    "key": "spacing",
-                    "default": "15px",
-                    "type": "string",
-                    "meta": { "uiType": "input" }
-                }
-            ]
-        },
-        {
             "label": "Layouts",
             "key": "layouts",
             "type": "section",
@@ -371,7 +343,7 @@
                         {
                             "label": "Color",
                             "key": "fontColor",
-                            "default": "#fff",
+                            "default": "#eceef2",
                             "type": "string",
                             "meta": { "uiType": "color", "dependency": { "on": "logotype", "if": "text" } }
                         },
@@ -455,8 +427,8 @@
                     ]
                 },
                 {
-                    "label": "Hamburger Menu",
-                    "key": "hamburger",
+                    "label": "Hamburger Button",
+                    "key": "hamburgerButton",
                     "type": "section",
                     "settings": [
                         {
@@ -472,16 +444,22 @@
                             "default": "#fff",
                             "type": "string",
                             "meta": { "uiType": "color" }
-                        },
+                        }
+                    ]
+                },
+                {
+                    "label": "Hamburger Menu",
+                    "key": "hamburgerMenu",
+                    "type": "section",
+                    "settings": [
                         {
                             "label": "Enter Animation",
                             "key": "inAnimation",
                             "default": "bounceInDown",
                             "type": "string",
                             "meta": { "uiType": "select", "options": [
-                                "bounceInLeft", "bounceInRight", "bounceInUp", "bounceInDown",
-                                "zoomInLeft", "zoomInRight", "zoomInUp", "zoomInDown",
-                                "slideInLeft", "slideInRight", "slideInUp", "slideInDown"
+                                "bounceInLeft", "bounceInRight", "bounceInDown",
+                                "slideInLeft", "slideInRight", "slideInDown"
                                 ] }
                         },
                         {
@@ -490,9 +468,8 @@
                             "default": "bounceOutUp",
                             "type": "string",
                             "meta": { "uiType": "select", "options": [
-                                "bounceOutLeft", "bounceOutRight", "bounceOutUp", "bounceOutDown",
-                                "zoomOutLeft", "zoomOutRight", "zoomOutUp", "zoomOutDown",
-                                "slideOutLeft", "slideOutRight", "slideOutUp", "slideOutDown"
+                                "bounceOutLeft", "bounceOutRight", "bounceOutUp",
+                                "slideOutLeft", "slideOutRight", "slideOutDown"
                                 ]
                             }
                         }
@@ -511,18 +488,109 @@
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Color",
-                            "key": "color",
-                            "default": "white",
+                            "label": "Font Color",
+                            "key": "fontColor",
+                            "default": "#eceef2",
                             "type": "string",
                             "meta": { "uiType": "color" }
                         },
                         {
                             "label": "Copyright",
                             "key": "copyright",
-                            "default": "©",
+                            "default": "© Copyright",
                             "type": "string",
                             "meta": { "uiType": "input" }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Widgets",
+            "key": "widgets",
+            "type": "section",
+            "settings": [
+                {
+                    "label": "General",
+                    "key": "general",
+                    "type": "section",
+                    "settings": [
+                        {
+                            "label": "Widgets Spacing",
+                            "key": "spacing",
+                            "default": "15px",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        }
+                    ]
+                },
+                {
+                    "label": "Widget Header",
+                    "key": "header",
+                    "type": "section",
+                    "settings": [
+                        {
+                            "label": "Font Size",
+                            "key": "fontSize",
+                            "default": "h4",
+                            "type": "string",
+                            "meta": { "uiType": "select", "options": ["h1", "h2", "h3", "h4", "h5", "h6"] }
+                        },
+                        {
+                            "label": "Font Style",
+                            "key": "fontStyle",
+                            "default": "none",
+                            "type": "string",
+                            "meta": { "uiType": "select", "options": [ "none", "capitalize", "uppercase", "lowercase" ] }
+                        },
+                        {
+                            "label": "Font Color",
+                            "key": "fontColor",
+                            "default": "white",
+                            "type": "string",
+                            "meta": { "uiType": "color" }
+                        },
+                        {
+                            "label": "Background Color",
+                            "key": "backgroundColor",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "color" }
+                        },
+                        {
+                            "label": "Padding",
+                            "key": "padding",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        },
+                        {
+                            "label": "Margin Bottom",
+                            "key": "marginBottom",
+                            "default": "10px",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        }
+                    ]
+                },
+                {
+                    "label": "Widget Body",
+                    "key": "body",
+                    "type": "section",
+                    "settings": [
+                        {
+                            "label": "Padding",
+                            "key": "padding",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        },
+                        {
+                            "label": "Background Color",
+                            "key": "backgroundColor",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "color" }
                         }
                     ]
                 }
@@ -534,27 +602,13 @@
             "type": "section",
             "settings": [
                 {
-                    "label": "Headline 1",
-                    "key": "headline1",
+                    "label": "General",
+                    "key": "general",
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Size",
-                            "key": "size",
-                            "default": "55px",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        }
-                    ]
-                },
-                {
-                    "label": "Headline 2",
-                    "key": "headline2",
-                    "type": "section",
-                    "settings": [
-                        {
-                            "label": "Size",
-                            "key": "size",
+                            "label": "Line Height",
+                            "key": "lineHeight",
                             "default": "45px",
                             "type": "string",
                             "meta": { "uiType": "input" }
@@ -562,55 +616,48 @@
                     ]
                 },
                 {
-                    "label": "Headline 3",
-                    "key": "headline3",
+                    "label": "Size",
+                    "key": "size",
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Size",
-                            "key": "size",
+                            "label": "H1",
+                            "key": "headline1",
+                            "type": "string",
+                            "default": "55px",
+                            "meta": { "uiType": "input" }
+                        },
+                        {
+                            "label": "H2",
+                            "key": "headline2",
+                            "default": "45px",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        },
+                        {
+                            "label": "H3",
+                            "key": "headline3",
                             "default": "30px",
                             "type": "string",
                             "meta": { "uiType": "input" }
-                        }
-                    ]
-                },
-                {
-                    "label": "Headline 4",
-                    "key": "headline4",
-                    "type": "section",
-                    "settings": [
+                        },
                         {
-                            "label": "Size",
-                            "key": "size",
+                            "label": "H4",
+                            "key": "headline4",
                             "default": "25px",
                             "type": "string",
                             "meta": { "uiType": "input" }
-                        }
-                    ]
-                },
-                {
-                    "label": "Headline 5",
-                    "key": "headline5",
-                    "type": "section",
-                    "settings": [
+                        },
                         {
-                            "label": "Size",
-                            "key": "size",
+                            "label": "H5",
+                            "key": "headline5",
                             "default": "20px",
                             "type": "string",
                             "meta": { "uiType": "input" }
-                        }
-                    ]
-                },
-                {
-                    "label": "Headline 6",
-                    "key": "headline6",
-                    "type": "section",
-                    "settings": [
+                        },
                         {
-                            "label": "Size",
-                            "key": "size",
+                            "label": "H6",
+                            "key": "headline6",
                             "default": "15px",
                             "type": "string",
                             "meta": { "uiType": "input" }

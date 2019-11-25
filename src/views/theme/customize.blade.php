@@ -1,8 +1,3 @@
-.container {
-    @style([ 'property' => 'width', 'value' => data_get($settings, 'general.container.width') ])
-    @style([ 'property' => 'max-width', 'value' => data_get($settings, 'general.container.maxWidth') ])
-}
-
 body {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'general.body.backgroundColor') ])
     @style([ 'property' => 'background-image', 'value' => data_get($settings, 'general.body.backgroundImage') ])
@@ -15,29 +10,41 @@ body {
     @style([ 'property' => 'font-family', 'value' => data_get($settings, 'general.font.family') ])
     @style([ 'property' => 'color', 'value' => data_get($settings, 'general.font.color') ])
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'general.font.size') ])
+    @style([ 'property' => 'line-height', 'value' => data_get($settings, 'general.font.lineHeight') ])
 }
 
+{{-- Container --}}
+.container {
+    @style([ 'property' => 'width', 'value' => data_get($settings, 'general.container.width') ])
+    @style([ 'property' => 'max-width', 'value' => data_get($settings, 'general.container.maxWidth') ])
+}
+{{-- Content Container Styles --}}
 .container .content {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'content.general.backgroundColor') ])
     @style([ 'property' => 'color', 'value' => data_get($settings, 'content.general.color') ])
 }
 
-.posts .post .post-title-link, .content-single .post .post-title {
+{{-- Content Styles --}}
+.content-index .posts .post .post-title-link, 
+.content-single .post .post-title {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'content.general.postTitle.color') ])
 }
 
-.posts .post .post-title-link:hover, .content-single .post .post-title:hover {
+.content-index .posts .post .post-title-link:hover, 
+.content-single .post .post-title:hover {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'content.general.postTitle.hoverColor') ])
 }
 
-.posts .post div.post-featured-image {
+{{-- Featured Image Styles --}}
+.content-index .posts .post .post-featured-image {
     @style([ 'property' => 'height', 'value' => data_get($settings, 'content.general.featuredImage.indexPageHeight') ])
 }
 
-.post div.post-featured-image {
+.content-single .post .post-featured-image {
     @style([ 'property' => 'height', 'value' => data_get($settings, 'content.general.featuredImage.singlePageHeight') ])
 }
 
+{{-- Sidebar Widget Styles --}}
 #sidebar-content .widget-title {
     @style([ 'property' => 'text-transform', 'value' => data_get($settings, 'widgets.titleStyle') ])
     @style([ 'property' => 'color', 'value' => data_get($settings, 'widgets.titleColor') ])
@@ -47,15 +54,18 @@ body {
     @style([ 'property' => 'margin-bottom', 'value' => data_get($settings, 'widgets.spacing') ])
 }
 
+{{-- Sidebar Styles --}}
 .container .sidebar {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'sidebar.general.backgroundColor') ])
 }
 
+{{-- Logo Styles --}}
 .sidebar header .logo .logo-link {
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'sidebar.logo.fontSize') ])
     @style([ 'property' => 'color', 'value' => data_get($settings, 'sidebar.logo.fontColor') ])
 }
 
+{{-- Navigation Styles --}}
 #navigation .menu .menu-item a {
     @style([ 'property' => 'padding', 'value' => data_get($settings, 'sidebar.menu.items.padding') ])
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'sidebar.menu.items.fontSize') ])
@@ -71,40 +81,49 @@ body {
     @style([ 'property' => 'padding', 'value' => data_get($settings, 'sidebar.menu.dropDownItems.padding') ])
 }
 
-.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'sidebar.hamburger.color') ])
+{{-- Hamburger Button Styles --}}
+.hamburger-inner, .hamburger-inner::before, 
+.hamburger-inner::after {
+    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'sidebar.hamburgerButton.color') ])
 }
 
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'sidebar.hamburger.activeColor') ])
+    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'sidebar.hamburgerButton.activeColor') ])
 }
 
+{{-- Sidebar Footer Styles --}}
 .sidebar footer {
-    @style([ 'property' => 'color', 'value' => data_get($settings, 'footer.general.color') ])
+    @style([ 'property' => 'color', 'value' => data_get($settings, 'footer.general.fontColor') ])
 }
 
+
+{{-- Headline styles --}}
 h1, .h1 {
-    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.headline1.size') ])
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.size.headline1') ])
 }
 
 h2, .h2 {
-    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.headline2.size') ])
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.size.headline2') ])
 }
 
 h3, .h3 {
-    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.headline3.size') ])
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.size.headline3') ])
 }
 
 h4, .h4 {
-    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.headline4.size') ])
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.size.headline4') ])
 }
 
 h5, .h5 {
-    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.headline5.size') ])
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.size.headline5') ])
 }
 
 h6, .h6 {
-    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.headline6.size') ])
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.size.headline6') ])
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+    @style([ 'property' => 'line-height', 'value' => data_get($settings, 'headlines.general.lineHeight') ])
 }

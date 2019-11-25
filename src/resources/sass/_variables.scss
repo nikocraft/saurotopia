@@ -23,16 +23,21 @@ $headlinesLineHeight: 45px;
 $sidebarBackgroundColor: #262930;
 $contentBackgroundColor: #fff;
 
+// Content
+$postTitleFontColor: #444;
+$postTitleFontHoverColor: #216a94;
+$postMetaDetailsFontColor: #444;
+
 // Logo
-$logoTextColor: #fff;
-$logoTextSize: 32px;
+$logoFontColor: #eceef2;
+$logoFontSize: 32px;
 
 // Tagline
-$taglineTextColor: #e4e4e4;
+$taglineFontColor: #eceef2;
 $taglineFontSize: 14px;
 
 // Sidebar Menu
-$menuTextColor: #fff;
+$menuItemFontColor: #eceef2;
 $menuItemFontHoverColor: #bdc7da;
 $menuItemFontSize: 18px;
 $menuItemPadding: 10px 0;
@@ -48,9 +53,10 @@ $socialIconHoverColor: #cbd5e0;
 $socialIconFontSize: 1.5rem;
 
 // Footer
-$footerTextColor: #eceef2;
+$footerFontColor: #eceef2;
 
 // Widgets
+$widgetHeaderFontColor: #eceef2;
 $widgetPostTitleLinkColor: #ececec;
 $widgetPostDateColor: #b1b1b1;
 

@@ -15,15 +15,16 @@
         user-select: none;
 
         i {
-            color: $menuTextColor;
+            color: $menuItemFontColor;
             font-size: $menuItemFontSize;
             cursor: pointer;
             padding: 0px;
         }
 
         a, span {
+            cursor: pointer;
             font-size: $menuItemFontSize;
-            color: $menuTextColor;
+            color: $menuItemFontColor;
             padding: $menuItemPadding;
             text-transform: $menuItemTextTransform;
             display: flex;
@@ -79,16 +80,16 @@
 .hamburger.is-active .hamburger-inner, 
 .hamburger.is-active .hamburger-inner::before, 
 .hamburger.is-active .hamburger-inner::after {
-    background-color: $menuTextColor;
+    background-color: $menuItemFontColor;
 }
 
 .hamburger-inner, 
 .hamburger-inner::before, 
 .hamburger-inner::after {
-    background-color: $menuTextColor;
+    background-color: $menuItemFontColor;
 }
 
 .hamburger {
     outline: none !important;
-    color: $menuTextColor !important;
+    color: $menuItemFontColor !important;
 }

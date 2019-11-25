@@ -1,5 +1,4 @@
 <header>
-    <!-- Mountains image -->
     <div class="logo">
         @if(get_theme_setting('sidebar.logo.logotype') == 'text')
             <a class="logo-link" href="{{ url('/') }}">
@@ -12,9 +11,9 @@
         @endif
     </div>
     <!-- Slogan -->
-    <h6 class="tagline">
-        Aurora is a great blog & portfolio theme.
-    </h6>
+    <div class="tagline">
+        {{ get_website_setting('website.tagline') }}
+    </div>
 
     <!-- Social Media icons -->
     {{-- <div class="social-media-icons">

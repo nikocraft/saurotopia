@@ -24,6 +24,7 @@ body {
     background-color: $sidebarBackgroundColor;
     display: flex;
     flex-direction: column;
+    color: $menuItemFontColor;
 
     @media (max-width: $largeDevices) {
         padding: 20px;

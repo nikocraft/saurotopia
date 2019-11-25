@@ -36,10 +36,10 @@
     }
 
     .post .post-title-link {
-        color: #444;
+        color: $postTitleFontColor;
     
         &:hover {
-            color: #216a94;
+            color: $postTitleFontHoverColor;
             text-decoration: none;
         }
     }
@@ -51,7 +51,7 @@
     .post-meta-detail {
         display: flex;
         margin-right: 15px;
-        color: #444444;
+        color: $postMetaDetailsFontColor;
     }
     
     .post-author {
@@ -102,19 +102,6 @@
 
     .post-excerpt {
         margin: 15px 0 10px 0;
-    }
-
-    .post-read-more {
-        color: #a0aec0;
-        border-width: 1px;
-        border-color: #cbd5e0;
-        border-radius: 4px;
-        padding: 5px 25px;
-    
-        &:hover {
-            color: #6a7077;
-            border-color: #a0aec0;
-        }
     }
 
     .post-footer {
