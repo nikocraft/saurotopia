@@ -9,7 +9,7 @@
                 <div class="menu-item @if($item->subItems->count()) dropdown @endif">
                     @if($item->parent_id == null)
                         @if($item->url)
-                            <a id="menu-item-a-{{ $item->id }}" href="/{{ $item->url }}">{{ $item->title }}</a>
+                            <a id="menu-item-a-{{ $item->id }}" href="{{ $item->url }}">{{ $item->title }}</a>
                         @else
                             <span id="menu-item-a-{{ $item->id }}" onclick="theme.dropDownMenuToggle(this.id)">{{ $item->title }}</span>
                         @endif
@@ -21,7 +21,7 @@
                     @if($item->subItems->count())
                         <div class="dropdown-content">
                         @foreach ($item->subItems as $key => $subItem)
-                            <div class="drop-menu-item"><a href="/{{ $subItem->url }}">{{ $subItem->title }}</a></div>
+                            <div class="drop-menu-item"><a href="{{ $subItem->url }}">{{ $subItem->title }}</a></div>
                         @endforeach
                         </div>
                     @endif
