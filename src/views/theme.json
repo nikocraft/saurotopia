@@ -14,8 +14,8 @@
     "asset-path"        : "themes/aurora",
     "settings": [
         {
-            "label": "General",
-            "key": "general",
+            "label": "Global",
+            "key": "global",
             "type": "section",
             "settings": [
                 {
@@ -678,7 +678,7 @@
                         {
                             "label": "Primary Font Source",
                             "key": "source-1",
-                            "default": "https://fonts.googleapis.com/css?family=Nunito&display=swap",
+                            "default": "",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         },
@@ -709,13 +709,20 @@
             ]
         },
         {
-            "label": "Css",
-            "key": "css",
+            "label": "Custom Css & JavaScript",
+            "key": "custom",
             "type": "section",
             "settings": [
                 {
-                    "label": "Custom Css",
-                    "key": "customCss",
+                    "label": "Css",
+                    "key": "css",
+                    "default": "",
+                    "type": "string",
+                    "meta": { "uiType": "textArea" }
+                },
+                {
+                    "label": "Js",
+                    "key": "javascript",
                     "default": "",
                     "type": "string",
                     "meta": { "uiType": "textArea" }

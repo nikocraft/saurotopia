@@ -60,11 +60,10 @@
     <link rel="stylesheet" href="{{ asset('themes/' . $themeFolder . '/css/customize.css') }}?{{ get_theme_timestamp() }}">
 @endif
 
-
-<!-- User Manual CSS -->
-@if(get_theme_setting('css.customCss'))
-    <style id="user-custom-css">
-        {{ get_theme_setting('css.customCss') }}
+<!-- Theme Custom CSS -->
+@if(get_theme_setting('custom.css'))
+    <style id="theme-custom-css">
+        {{ get_theme_setting('custom.css') }}
     </style>
 @endif
 
