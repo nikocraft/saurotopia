@@ -9,7 +9,7 @@
     "org"               : "Reimagined Works",
     "version"           : "1.0.0",
     "description"       : "Aurora a simple versatile blog theme.",
-    "url"               : "www.laraone.com",
+    "url"               : "https://www.laraone.com",
     "views-path"        : "aurora",
     "asset-path"        : "themes/aurora",
     "settings": [
