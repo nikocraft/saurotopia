@@ -16,23 +16,7 @@
     </div>
 
     <!-- Social Media icons -->
-    {{-- <div class="social-media-icons">
-        <div class="social-icon">
-            <a href="#">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-        </div>
-        <div class="social-icon">
-            <a href="#">
-                <i class="fab fa-twitter"></i>
-            </a>
-        </div>
-        <div class="social-icon">
-            <a href="#">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-    </div> --}}
+    @include('includes/social-icons')
 
     <div class="hamburger-button-wrapper">
         <button id="hamburger-btn" onClick="theme.hamburgerToggle(this.id)" class="hamburger hamburger--collapse" type="button">

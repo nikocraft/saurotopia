@@ -714,15 +714,15 @@
             "type": "section",
             "settings": [
                 {
-                    "label": "Instagram",
-                    "key": "instagram",
+                    "label": "Reddit",
+                    "key": "reddit",
                     "default": "",
                     "type": "string",
                     "meta": { "uiType": "input" }
                 },
                 {
-                    "label": "Reddit",
-                    "key": "reddit",
+                    "label": "Instagram",
+                    "key": "instagram",
                     "default": "",
                     "type": "string",
                     "meta": { "uiType": "input" }
@@ -735,15 +735,8 @@
                     "meta": { "uiType": "input" }
                 },
                 {
-                    "label": "Youtube",
-                    "key": "youtube",
-                    "default": "",
-                    "type": "string",
-                    "meta": { "uiType": "input" }
-                },
-                {
                     "label": "Pintrest",
-                    "key": "pintrest",
+                    "key": "pinterest",
                     "default": "",
                     "type": "string",
                     "meta": { "uiType": "input" }
@@ -751,13 +744,6 @@
                 {
                     "label": "Artstation",
                     "key": "artstation",
-                    "default": "",
-                    "type": "string",
-                    "meta": { "uiType": "input" }
-                },
-                {
-                    "label": "LinkedIn",
-                    "key": "linkedin",
                     "default": "",
                     "type": "string",
                     "meta": { "uiType": "input" }
@@ -772,6 +758,20 @@
                 {
                     "label": "Dribbble",
                     "key": "dribbble",
+                    "default": "",
+                    "type": "string",
+                    "meta": { "uiType": "input" }
+                },
+                {
+                    "label": "Youtube",
+                    "key": "youtube",
+                    "default": "",
+                    "type": "string",
+                    "meta": { "uiType": "input" }
+                },
+                {
+                    "label": "LinkedIn",
+                    "key": "linkedin",
                     "default": "",
                     "type": "string",
                     "meta": { "uiType": "input" }

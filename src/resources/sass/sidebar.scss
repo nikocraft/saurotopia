@@ -24,19 +24,19 @@
             margin-bottom: 15px;
         }
 
-        .social-media-icons {
+        .social-media {
             display: flex;
             justify-content: center;
             margin-bottom: 15px;
-        }
 
-        .social-icon {
-            font-size: $socialIconFontSize;
-            color: $socialIconColor;
-            padding-right: 1rem;
-
-            &:hover {
-                color: $socialIconHoverColor;
+            i {
+                font-size: $socialIconFontSize;
+                color: $socialIconColor;
+                padding-right: $socialIconPadding;
+    
+                &:hover {
+                    color: $socialIconHoverColor;
+                }
             }
         }
     }
