@@ -25,7 +25,13 @@
                     <div class="post-meta-detail">
                         <div class="post-meta-date">Posted on {{ $post->created_at->format('Y-m-d') }}</div>
                         <div class="post-meta-by">&nbsp; by &nbsp;</div>
-                        <div class="post-meta-author">{{ $post->author->username }}</div> 
+                        <div class="post-meta-author">
+                            @if(get_website_setting('members.userDisplayName') == 'fullname')
+                                {{ $post->author->firstname }} {{ $post->author->lastname }}
+                            @else
+                                {{ $post->author->username }}
+                            @endif
+                        </div> 
                     </div>
                 </div>
                 @if(has_excerpt($post))
