@@ -155,6 +155,13 @@
                             "type": "section",
                             "settings": [
                                 {
+                                    "label": "Font Family",
+                                    "key": "fontfamily",
+                                    "default": "",
+                                    "type": "string",
+                                    "meta": { "uiType": "input" }
+                                },
+                                {
                                     "label": "Color",
                                     "key": "color",
                                     "default": "#444",
@@ -340,6 +347,13 @@
                             "meta": { "uiType": "select", "options": ["text", "image"] }
                         },
                         {
+                            "label": "Font Family",
+                            "key": "fontfamily",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "input",  "dependency": { "on": "logotype", "if": "text" } }
+                        },
+                        {
                             "label": "Color",
                             "key": "fontColor",
                             "default": "#eceef2",
@@ -376,6 +390,13 @@
                                     "label": "Item Padding",
                                     "key": "padding",
                                     "default": "10px 0",
+                                    "type": "string",
+                                    "meta": { "uiType": "input" }
+                                },
+                                {
+                                    "label": "Font Family",
+                                    "key": "fontfamily",
+                                    "default": "",
                                     "type": "string",
                                     "meta": { "uiType": "input" }
                                 },
@@ -543,6 +564,13 @@
                             "meta": { "uiType": "select", "options": [ "none", "capitalize", "uppercase", "lowercase" ] }
                         },
                         {
+                            "label": "Font Family",
+                            "key": "fontfamily",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        },
+                        {
                             "label": "Font Color",
                             "key": "fontColor",
                             "default": "white",
@@ -606,7 +634,7 @@
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Line Height",
+                            "label": "H1 - H4 Line Height",
                             "key": "lineHeight",
                             "default": "45px",
                             "type": "string",
@@ -695,7 +723,6 @@
                     "label": "Icons",
                     "key": "icons",
                     "type": "section",
-                    "meta": { "hidden": true },
                     "settings": [
                         {
                             "label": "Source",
@@ -735,14 +762,14 @@
                         {
                 
                             "label": "Meta Description",
-                            "key": "metaDescription",
+                            "key": "description",
                             "default": "",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         },
                         {
                             "label": "Meta Keywords",
-                            "key": "metaKeywords",
+                            "key": "keywords",
                             "type": "string",
                             "default": "",
                             "meta": { "uiType": "input" }

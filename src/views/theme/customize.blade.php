@@ -35,6 +35,7 @@ body {
 .content-index .posts .post .post-title-link, 
 .content-single .post .post-title {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'content.general.postTitle.color') ])
+    @style([ 'property' => 'font-family', 'value' => data_get($settings, 'content.general.postTitle.fontFamily') ])
 }
 
 .content-index .posts .post .post-title-link:hover, 
@@ -85,6 +86,7 @@ body {
 
 {{-- Logo Styles Start --}}
 .sidebar header .logo .logo-link {
+    @style([ 'property' => 'font-family', 'value' => data_get($settings, 'sidebar.logo.fontFamily') ])
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'sidebar.logo.fontSize') ])
     @style([ 'property' => 'color', 'value' => data_get($settings, 'sidebar.logo.fontColor') ])
 }
@@ -94,6 +96,7 @@ body {
 {{-- Navigation Styles Start --}}
 #navigation .menu .menu-item a {
     @style([ 'property' => 'padding', 'value' => data_get($settings, 'sidebar.menu.items.padding') ])
+    @style([ 'property' => 'font-family', 'value' => data_get($settings, 'sidebar.logo.fontFamily') ])
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'sidebar.menu.items.fontSize') ])
     @style([ 'property' => 'color', 'value' => data_get($settings, 'sidebar.menu.items.fontColor') ])
 }
