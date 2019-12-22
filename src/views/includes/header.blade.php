@@ -2,7 +2,7 @@
     <div class="logo">
         @if(get_theme_setting('sidebar.logo.logotype') == 'text')
             <a class="logo-link" href="{{ url('/') }}">
-                {{ get_website_setting('website.title') }}
+                {{ get_website_setting('website.general.title') }}
             </a>
         @else
             <a class="logo-link" href="{{ url('/') }}">
@@ -12,7 +12,7 @@
     </div>
     <!-- Slogan -->
     <div class="tagline">
-        {{ get_website_setting('website.tagline') }}
+        {{ get_website_setting('website.general.tagline') }}
     </div>
 
     <!-- Social Media icons -->
