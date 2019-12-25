@@ -1,7 +1,5 @@
 let mix = require('laravel-mix');
 const path = require('path');
-const glob = require('glob-all');
-require('laravel-mix-purgecss');
 
 mix.webpackConfig({
     resolve: {

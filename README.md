@@ -1,2 +1,2 @@
-# aurora-theme
-Aurora Theme
+# Saurotopia Theme
+Theme for Saurotopia project.

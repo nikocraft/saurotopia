@@ -1,11 +1,5 @@
 Copyright (c) 2019 Reimagined Works, Niko Craft
 
-Aurora is free of charge to use with Laraone CMS (https://laraone.com). You are free
-to modify its source code for private or commercial use on any websites you or your
-clients own. This license does not grant you the right to distribute this theme or any
-modifications to the global community by offering it for download. For such uses, written
-permission is needed.
-
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
